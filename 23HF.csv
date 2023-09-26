@@ -1,67 +1,67 @@
 Format,Start_Date,Start_Time,End_Date,End_Time,Title,Description,Location,Location_Url,Location_Details,All_Day_Event,Event_Type,Tags,Team1_ID,Team1_Is_Home,Team2_ID,Team2_Name,Custom_Opponent,Event_ID
-SportsEngine,10/5/2023,6:00 PM,10/5/2023,8:30 PM,4 Sheets To The Wind at Bada Bing Bada Broom,,Sheet A,,,0,Game,,23HF01,0,23HF02,,FALSE,539473309
-SportsEngine,10/5/2023,6:00 PM,10/5/2023,8:30 PM,Barber at Butter Cutters,,Sheet B,,,0,Game,,23HF03,0,23HF04,,FALSE,539473310
-SportsEngine,10/5/2023,6:00 PM,10/5/2023,8:30 PM,Curlin' Baconators at Haggis Hitters,,Sheet C,,,0,Game,,23HF05,0,23HF06,,FALSE,539473311
+SportsEngine,10/5/2023,6:00 PM,10/5/2023,8:00 PM,4 Sheets To The Wind at Bada Bing Bada Broom,,Sheet A,,,0,Game,,23HF01,0,23HF02,,FALSE,539473309
+SportsEngine,10/5/2023,6:00 PM,10/5/2023,8:00 PM,Barber at Butter Cutters,,Sheet B,,,0,Game,,23HF03,0,23HF04,,FALSE,539473310
+SportsEngine,10/5/2023,6:00 PM,10/5/2023,8:00 PM,Curlin' Baconators at Haggis Hitters,,Sheet C,,,0,Game,,23HF05,0,23HF06,,FALSE,539473311
 SportsEngine,10/5/2023,8:30 PM,10/5/2023,10:30 PM,Ice Breakers at Liske,,Sheet A,,,0,Game,,23HF07,0,23HF08,,FALSE,539473312
 SportsEngine,10/5/2023,8:30 PM,10/5/2023,10:30 PM,Perfect Curl at Right Down The Line,,Sheet B,,,0,Game,,23HF09,0,23HF10,,FALSE,539473313
 SportsEngine,10/5/2023,8:30 PM,10/5/2023,10:30 PM,Rutherford at Standeven,,Sheet C,,,0,Game,,23HF11,0,23HF12,,FALSE,539473314
-SportsEngine,10/12/2023,6:00 PM,10/12/2023,8:30 PM,Perfect Curl at Standeven,,Sheet A,,,0,Game,,23HF09,0,23HF12,,FALSE,539473315
-SportsEngine,10/12/2023,6:00 PM,10/12/2023,8:30 PM,Ice Breakers at Rutherford,,Sheet B,,,0,Game,,23HF07,0,23HF11,,FALSE,539473316
-SportsEngine,10/12/2023,6:00 PM,10/12/2023,8:30 PM,Butter Cutters at Right Down The Line,,Sheet C,,,0,Game,,23HF04,0,23HF10,,FALSE,539473317
+SportsEngine,10/12/2023,6:00 PM,10/12/2023,8:00 PM,Perfect Curl at Standeven,,Sheet A,,,0,Game,,23HF09,0,23HF12,,FALSE,539473315
+SportsEngine,10/12/2023,6:00 PM,10/12/2023,8:00 PM,Ice Breakers at Rutherford,,Sheet B,,,0,Game,,23HF07,0,23HF11,,FALSE,539473316
+SportsEngine,10/12/2023,6:00 PM,10/12/2023,8:00 PM,Butter Cutters at Right Down The Line,,Sheet C,,,0,Game,,23HF04,0,23HF10,,FALSE,539473317
 SportsEngine,10/12/2023,8:30 PM,10/12/2023,10:30 PM,Barber at Haggis Hitters,,Sheet A,,,0,Game,,23HF03,0,23HF06,,FALSE,539473318
 SportsEngine,10/12/2023,8:30 PM,10/12/2023,10:30 PM,4 Sheets To The Wind at Curlin' Baconators,,Sheet B,,,0,Game,,23HF01,0,23HF05,,FALSE,539473319
 SportsEngine,10/12/2023,8:30 PM,10/12/2023,10:30 PM,Bada Bing Bada Broom at Liske,,Sheet C,,,0,Game,,23HF02,0,23HF08,,FALSE,539473320
-SportsEngine,10/19/2023,6:00 PM,10/19/2023,8:30 PM,Curlin' Baconators at Rutherford,,Sheet A,,,0,Game,,23HF05,0,23HF11,,FALSE,539473321
-SportsEngine,10/19/2023,6:00 PM,10/19/2023,8:30 PM,Liske at Right Down The Line,,Sheet B,,,0,Game,,23HF08,0,23HF10,,FALSE,539473322
-SportsEngine,10/19/2023,6:00 PM,10/19/2023,8:30 PM,4 Sheets To The Wind at Haggis Hitters,,Sheet C,,,0,Game,,23HF01,0,23HF06,,FALSE,539473323
+SportsEngine,10/19/2023,6:00 PM,10/19/2023,8:00 PM,Curlin' Baconators at Rutherford,,Sheet A,,,0,Game,,23HF05,0,23HF11,,FALSE,539473321
+SportsEngine,10/19/2023,6:00 PM,10/19/2023,8:00 PM,Liske at Right Down The Line,,Sheet B,,,0,Game,,23HF08,0,23HF10,,FALSE,539473322
+SportsEngine,10/19/2023,6:00 PM,10/19/2023,8:00 PM,4 Sheets To The Wind at Haggis Hitters,,Sheet C,,,0,Game,,23HF01,0,23HF06,,FALSE,539473323
 SportsEngine,10/19/2023,8:30 PM,10/19/2023,10:30 PM,Butter Cutters at Ice Breakers,,Sheet A,,,0,Game,,23HF04,0,23HF07,,FALSE,539473324
 SportsEngine,10/19/2023,8:30 PM,10/19/2023,10:30 PM,Bada Bing Bada Broom at Standeven,,Sheet B,,,0,Game,,23HF02,0,23HF12,,FALSE,539473325
 SportsEngine,10/19/2023,8:30 PM,10/19/2023,10:30 PM,Barber at Perfect Curl,,Sheet C,,,0,Game,,23HF03,0,23HF09,,FALSE,539473326
-SportsEngine,10/26/2023,6:00 PM,10/26/2023,8:30 PM,Bada Bing Bada Broom at Barber,,Sheet A,,,0,Game,,23HF02,0,23HF03,,FALSE,539473327
-SportsEngine,10/26/2023,6:00 PM,10/26/2023,8:30 PM,4 Sheets To The Wind at Perfect Curl,,Sheet B,,,0,Game,,23HF01,0,23HF09,,FALSE,539473328
-SportsEngine,10/26/2023,6:00 PM,10/26/2023,8:30 PM,Curlin' Baconators at Ice Breakers,,Sheet C,,,0,Game,,23HF05,0,23HF07,,FALSE,539473329
+SportsEngine,10/26/2023,6:00 PM,10/26/2023,8:00 PM,Bada Bing Bada Broom at Barber,,Sheet A,,,0,Game,,23HF02,0,23HF03,,FALSE,539473327
+SportsEngine,10/26/2023,6:00 PM,10/26/2023,8:00 PM,4 Sheets To The Wind at Perfect Curl,,Sheet B,,,0,Game,,23HF01,0,23HF09,,FALSE,539473328
+SportsEngine,10/26/2023,6:00 PM,10/26/2023,8:00 PM,Curlin' Baconators at Ice Breakers,,Sheet C,,,0,Game,,23HF05,0,23HF07,,FALSE,539473329
 SportsEngine,10/26/2023,8:30 PM,10/26/2023,10:30 PM,Haggis Hitters at Liske,,Sheet A,,,0,Game,,23HF06,0,23HF08,,FALSE,539473330
 SportsEngine,10/26/2023,8:30 PM,10/26/2023,10:30 PM,Butter Cutters at Rutherford,,Sheet B,,,0,Game,,23HF04,0,23HF11,,FALSE,539473331
 SportsEngine,10/26/2023,8:30 PM,10/26/2023,10:30 PM,Right Down The Line at Standeven,,Sheet C,,,0,Game,,23HF10,0,23HF12,,FALSE,539473332
-SportsEngine,11/2/2023,6:00 PM,11/2/2023,8:30 PM,Butter Cutters at Standeven,,Sheet A,,,0,Game,,23HF04,0,23HF12,,FALSE,539473333
-SportsEngine,11/2/2023,6:00 PM,11/2/2023,8:30 PM,Barber at Right Down The Line,,Sheet B,,,0,Game,,23HF03,0,23HF10,,FALSE,539473334
-SportsEngine,11/2/2023,6:00 PM,11/2/2023,8:30 PM,Haggis Hitters at Perfect Curl,,Sheet C,,,0,Game,,23HF06,0,23HF09,,FALSE,539473335
+SportsEngine,11/2/2023,6:00 PM,11/2/2023,8:00 PM,Butter Cutters at Standeven,,Sheet A,,,0,Game,,23HF04,0,23HF12,,FALSE,539473333
+SportsEngine,11/2/2023,6:00 PM,11/2/2023,8:00 PM,Barber at Right Down The Line,,Sheet B,,,0,Game,,23HF03,0,23HF10,,FALSE,539473334
+SportsEngine,11/2/2023,6:00 PM,11/2/2023,8:00 PM,Haggis Hitters at Perfect Curl,,Sheet C,,,0,Game,,23HF06,0,23HF09,,FALSE,539473335
 SportsEngine,11/2/2023,8:30 PM,11/2/2023,10:30 PM,4 Sheets To The Wind at Ice Breakers,,Sheet A,,,0,Game,,23HF01,0,23HF07,,FALSE,539473336
 SportsEngine,11/2/2023,8:30 PM,11/2/2023,10:30 PM,Curlin' Baconators at Liske,,Sheet B,,,0,Game,,23HF05,0,23HF08,,FALSE,539473337
 SportsEngine,11/2/2023,8:30 PM,11/2/2023,10:30 PM,Bada Bing Bada Broom at Rutherford,,Sheet C,,,0,Game,,23HF02,0,23HF11,,FALSE,539473338
-SportsEngine,11/9/2023,6:00 PM,11/9/2023,8:30 PM,Bada Bing Bada Broom at Right Down The Line,,Sheet A,,,0,Game,,23HF02,0,23HF10,,FALSE,539473339
-SportsEngine,11/9/2023,6:00 PM,11/9/2023,8:30 PM,4 Sheets To The Wind at Rutherford,,Sheet B,,,0,Game,,23HF01,0,23HF11,,FALSE,539473340
-SportsEngine,11/9/2023,6:00 PM,11/9/2023,8:30 PM,Butter Cutters at Liske,,Sheet C,,,0,Game,,23HF04,0,23HF08,,FALSE,539473341
+SportsEngine,11/9/2023,6:00 PM,11/9/2023,8:00 PM,Bada Bing Bada Broom at Right Down The Line,,Sheet A,,,0,Game,,23HF02,0,23HF10,,FALSE,539473339
+SportsEngine,11/9/2023,6:00 PM,11/9/2023,8:00 PM,4 Sheets To The Wind at Rutherford,,Sheet B,,,0,Game,,23HF01,0,23HF11,,FALSE,539473340
+SportsEngine,11/9/2023,6:00 PM,11/9/2023,8:00 PM,Butter Cutters at Liske,,Sheet C,,,0,Game,,23HF04,0,23HF08,,FALSE,539473341
 SportsEngine,11/9/2023,8:30 PM,11/9/2023,10:30 PM,Curlin' Baconators at Perfect Curl,,Sheet A,,,0,Game,,23HF05,0,23HF09,,FALSE,539473342
 SportsEngine,11/9/2023,8:30 PM,11/9/2023,10:30 PM,Haggis Hitters at Ice Breakers,,Sheet B,,,0,Game,,23HF06,0,23HF07,,FALSE,539473343
 SportsEngine,11/9/2023,8:30 PM,11/9/2023,10:30 PM,Barber at Standeven,,Sheet C,,,0,Game,,23HF03,0,23HF12,,FALSE,539473344
-SportsEngine,11/16/2023,6:00 PM,11/16/2023,8:30 PM,Haggis Hitters at Standeven,,Sheet A,,,0,Game,,23HF06,0,23HF12,,FALSE,539473345
-SportsEngine,11/16/2023,6:00 PM,11/16/2023,8:30 PM,Barber at Curlin' Baconators,,Sheet B,,,0,Game,,23HF03,0,23HF05,,FALSE,539473346
-SportsEngine,11/16/2023,6:00 PM,11/16/2023,8:30 PM,Ice Breakers at Perfect Curl,,Sheet C,,,0,Game,,23HF07,0,23HF09,,FALSE,539473347
+SportsEngine,11/16/2023,6:00 PM,11/16/2023,8:00 PM,Haggis Hitters at Standeven,,Sheet A,,,0,Game,,23HF06,0,23HF12,,FALSE,539473345
+SportsEngine,11/16/2023,6:00 PM,11/16/2023,8:00 PM,Barber at Curlin' Baconators,,Sheet B,,,0,Game,,23HF03,0,23HF05,,FALSE,539473346
+SportsEngine,11/16/2023,6:00 PM,11/16/2023,8:00 PM,Ice Breakers at Perfect Curl,,Sheet C,,,0,Game,,23HF07,0,23HF09,,FALSE,539473347
 SportsEngine,11/16/2023,8:30 PM,11/16/2023,10:30 PM,4 Sheets To The Wind at Liske,,Sheet A,,,0,Game,,23HF01,0,23HF08,,FALSE,539473348
 SportsEngine,11/16/2023,8:30 PM,11/16/2023,10:30 PM,Bada Bing Bada Broom at Butter Cutters,,Sheet B,,,0,Game,,23HF02,0,23HF04,,FALSE,539473349
 SportsEngine,11/16/2023,8:30 PM,11/16/2023,10:30 PM,Right Down The Line at Rutherford,,Sheet C,,,0,Game,,23HF10,0,23HF11,,FALSE,539473350
-SportsEngine,11/30/2023,6:00 PM,11/30/2023,8:30 PM,Barber at Rutherford,,Sheet A,,,0,Game,,23HF03,0,23HF11,,FALSE,539473351
-SportsEngine,11/30/2023,6:00 PM,11/30/2023,8:30 PM,Liske at Perfect Curl,,Sheet B,,,0,Game,,23HF08,0,23HF09,,FALSE,539473352
-SportsEngine,11/30/2023,6:00 PM,11/30/2023,8:30 PM,4 Sheets To The Wind at Butter Cutters,,Sheet C,,,0,Game,,23HF01,0,23HF04,,FALSE,539473353
+SportsEngine,11/30/2023,6:00 PM,11/30/2023,8:00 PM,Barber at Rutherford,,Sheet A,,,0,Game,,23HF03,0,23HF11,,FALSE,539473351
+SportsEngine,11/30/2023,6:00 PM,11/30/2023,8:00 PM,Liske at Perfect Curl,,Sheet B,,,0,Game,,23HF08,0,23HF09,,FALSE,539473352
+SportsEngine,11/30/2023,6:00 PM,11/30/2023,8:00 PM,4 Sheets To The Wind at Butter Cutters,,Sheet C,,,0,Game,,23HF01,0,23HF04,,FALSE,539473353
 SportsEngine,11/30/2023,8:30 PM,11/30/2023,10:30 PM,Curlin' Baconators at Right Down The Line,,Sheet A,,,0,Game,,23HF05,0,23HF10,,FALSE,539473354
 SportsEngine,11/30/2023,8:30 PM,11/30/2023,10:30 PM,Ice Breakers at Standeven,,Sheet B,,,0,Game,,23HF07,0,23HF12,,FALSE,539473355
 SportsEngine,11/30/2023,8:30 PM,11/30/2023,10:30 PM,Bada Bing Bada Broom at Haggis Hitters,,Sheet C,,,0,Game,,23HF02,0,23HF06,,FALSE,539473356
-SportsEngine,12/7/2023,6:00 PM,12/7/2023,8:30 PM,4 Sheets To The Wind at Standeven,,Sheet A,,,0,Game,,23HF01,0,23HF12,,FALSE,539473357
-SportsEngine,12/7/2023,6:00 PM,12/7/2023,8:30 PM,Bada Bing Bada Broom at Curlin' Baconators,,Sheet B,,,0,Game,,23HF02,0,23HF05,,FALSE,539473358
-SportsEngine,12/7/2023,6:00 PM,12/7/2023,8:30 PM,Ice Breakers at Right Down The Line,,Sheet C,,,0,Game,,23HF07,0,23HF10,,FALSE,539473359
+SportsEngine,12/7/2023,6:00 PM,12/7/2023,8:00 PM,4 Sheets To The Wind at Standeven,,Sheet A,,,0,Game,,23HF01,0,23HF12,,FALSE,539473357
+SportsEngine,12/7/2023,6:00 PM,12/7/2023,8:00 PM,Bada Bing Bada Broom at Curlin' Baconators,,Sheet B,,,0,Game,,23HF02,0,23HF05,,FALSE,539473358
+SportsEngine,12/7/2023,6:00 PM,12/7/2023,8:00 PM,Ice Breakers at Right Down The Line,,Sheet C,,,0,Game,,23HF07,0,23HF10,,FALSE,539473359
 SportsEngine,12/7/2023,8:30 PM,12/7/2023,10:30 PM,Butter Cutters at Perfect Curl,,Sheet A,,,0,Game,,23HF04,0,23HF09,,FALSE,539473360
 SportsEngine,12/7/2023,8:30 PM,12/7/2023,10:30 PM,Haggis Hitters at Rutherford,,Sheet B,,,0,Game,,23HF06,0,23HF11,,FALSE,539473361
 SportsEngine,12/7/2023,8:30 PM,12/7/2023,10:30 PM,Barber at Liske,,Sheet C,,,0,Game,,23HF03,0,23HF08,,FALSE,539473362
-SportsEngine,12/14/2023,6:00 PM,12/14/2023,8:30 PM,Haggis Hitters at Right Down The Line,,Sheet A,,,0,Game,,23HF06,0,23HF10,,FALSE,539473363
-SportsEngine,12/14/2023,6:00 PM,12/14/2023,8:30 PM,Liske at Standeven,,Sheet B,,,0,Game,,23HF08,0,23HF12,,FALSE,539473364
-SportsEngine,12/14/2023,6:00 PM,12/14/2023,8:30 PM,Butter Cutters at Curlin' Baconators,,Sheet C,,,0,Game,,23HF04,0,23HF05,,FALSE,539473365
+SportsEngine,12/14/2023,6:00 PM,12/14/2023,8:00 PM,Haggis Hitters at Right Down The Line,,Sheet A,,,0,Game,,23HF06,0,23HF10,,FALSE,539473363
+SportsEngine,12/14/2023,6:00 PM,12/14/2023,8:00 PM,Liske at Standeven,,Sheet B,,,0,Game,,23HF08,0,23HF12,,FALSE,539473364
+SportsEngine,12/14/2023,6:00 PM,12/14/2023,8:00 PM,Butter Cutters at Curlin' Baconators,,Sheet C,,,0,Game,,23HF04,0,23HF05,,FALSE,539473365
 SportsEngine,12/14/2023,8:30 PM,12/14/2023,10:30 PM,Bada Bing Bada Broom at Ice Breakers,,Sheet A,,,0,Game,,23HF02,0,23HF07,,FALSE,539473366
 SportsEngine,12/14/2023,8:30 PM,12/14/2023,10:30 PM,4 Sheets To The Wind at Barber,,Sheet B,,,0,Game,,23HF01,0,23HF03,,FALSE,539473367
 SportsEngine,12/14/2023,8:30 PM,12/14/2023,10:30 PM,Perfect Curl at Rutherford,,Sheet C,,,0,Game,,23HF09,0,23HF11,,FALSE,539473368
-SportsEngine,12/21/2023,6:00 PM,12/21/2023,8:30 PM,Liske at Rutherford,,Sheet A,,,0,Game,,23HF08,0,23HF11,,FALSE,539473369
-SportsEngine,12/21/2023,6:00 PM,12/21/2023,8:30 PM,Bada Bing Bada Broom at Perfect Curl,,Sheet B,,,0,Game,,23HF02,0,23HF09,,FALSE,539473370
-SportsEngine,12/21/2023,6:00 PM,12/21/2023,8:30 PM,Barber at Ice Breakers,,Sheet C,,,0,Game,,23HF03,0,23HF07,,FALSE,539473371
+SportsEngine,12/21/2023,6:00 PM,12/21/2023,8:00 PM,Liske at Rutherford,,Sheet A,,,0,Game,,23HF08,0,23HF11,,FALSE,539473369
+SportsEngine,12/21/2023,6:00 PM,12/21/2023,8:00 PM,Bada Bing Bada Broom at Perfect Curl,,Sheet B,,,0,Game,,23HF02,0,23HF09,,FALSE,539473370
+SportsEngine,12/21/2023,6:00 PM,12/21/2023,8:00 PM,Barber at Ice Breakers,,Sheet C,,,0,Game,,23HF03,0,23HF07,,FALSE,539473371
 SportsEngine,12/21/2023,8:30 PM,12/21/2023,10:30 PM,Curlin' Baconators at Standeven,,Sheet A,,,0,Game,,23HF05,0,23HF12,,FALSE,539473372
 SportsEngine,12/21/2023,8:30 PM,12/21/2023,10:30 PM,Butter Cutters at Haggis Hitters,,Sheet B,,,0,Game,,23HF04,0,23HF06,,FALSE,539473373
 SportsEngine,12/21/2023,8:30 PM,12/21/2023,10:30 PM,4 Sheets To The Wind at Right Down The Line,,Sheet C,,,0,Game,,23HF01,0,23HF10,,FALSE,539473374
