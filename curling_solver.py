@@ -8,31 +8,45 @@ import matplotlib.pyplot as plt
 import numpy as np
 from csv import DictWriter
 
-EXHIBITION_WEEK = True
-EVENT_IDS = ()  # 562957857, 562957858, 562957859, 562957860, 562957861, 562957862, 562957863, 562957864, 562957865, 562957866, 562957867, 562957868, 562957869, 562957870, 562957871, 562957872, 562957873, 562957874, 562957875, 562957876, 562957877, 562957878, 562957879, 562957880, 562957881, 562957882, 562957883, 562957884, 562957885, 562957886, 562957887, 562957888, 562957889, 562957890, 562957891, 562957894, 562957904, 562957905, 562957906,
-#  562957907, 562957908, 562957909, 562957910, 562957911, 562957912, 562957913, 562957915, 562957916, 562957917, 562957918, 562957919, 562957920, 562957921, 562957922, 562957923, 562957924, 562957925, 562957926, 562957927, 562957928, 562957929, 562957930, 562957931, 562957932, 562957933, 562957941, 562957943, 562957944, 562957945, 562957946, 562957947, 562957948, 562957949, 562957950, 562957951, 562957952, 562957954, 562957955)
-# SEASON_PREFIX = '24HF'
-#          '2024-11-7',
-#          '2024-11-14',
-#          '2024-11-21',
-#          '2024-12-5',
-#          '2024-12-12',
-#          '2024-12-19',
-#          '2025-01-2')
-SEASON_PREFIX = '24TF'
-DATES = ('2024-09-24',
-         '2024-10-01',
-         '2024-10-08',
-         '2024-10-15',
-         '2024-10-22',
-         '2024-10-29',
-         '2024-11-05',
-         '2024-11-12',
-         '2024-11-19',
-         '2024-11-26',
-         '2024-12-03',
-         '2024-12-10',
-         '2025-12-17')
+NUM_TEAMS = 13
+NUM_WEEKS = 13
+ADD_EXHIBITION_WEEK = False
+
+EVENT_IDS = []
+# NUM_TEAMS = 12
+# NUM_WEEKS = 11
+# ADD_EXHIBITION_WEEK = True
+
+SEASON_PREFIX = '24HW'
+DATES = ('2025-01-09',
+         '2025-01-16',
+         '2025-01-23',
+         '2025-01-30',
+         '2025-02-06',
+         '2025-02-13',
+         '2025-02-20',
+         '2025-02-27',
+         '2025-03-06',
+         '2025-03-13',
+         '2025-03-20',
+         '2025-03-27',
+         '2025-04-03')
+
+# SEASON_PREFIX = '24TF'
+# DATES = (  # '2024-09-24',
+#     '2024-10-01',
+#     '2024-10-08',
+#     '2024-10-15',
+#     '2024-10-22',
+#     '2024-10-29',
+#     '2024-11-05',
+#     '2024-11-12',
+#     '2024-11-19',
+#     '2024-11-26',
+#     '2024-12-03',
+#     '2024-12-10',
+#     '2025-12-17')
+
 TIMES = (('18:00:00', '20:00:00'), ('20:30:00', '22:30:00'))
 SHEET_NAMES = ('Sheet A', 'Sheet B', 'Sheet C')
 
@@ -335,7 +349,7 @@ def print_games_per_team(games: List[Game]) -> None:
                     continue
                 opp = game.home if team == game.away else game.away
                 print(
-                    f'w{game.week} d:{game.draw}, s:{game.sheet}, opp:{opp}')
+                    f'{DATES[game.week]} d:{game.draw}, {SHEET_NAMES[game.sheet]}, opp:{opp}')
         print('')
 
 
@@ -482,7 +496,7 @@ def write_out_sports_engine_csv(games: List[Game]) -> None:
         event_idx = event_idx + 1
         rows.append(row)
 
-    with open(f'Thursday_League_SE_12teams_{SEASON_PREFIX}.csv', 'w', encoding='ascii', newline='') as fp:
+    with open(f'{SEASON_PREFIX}_League_SE_{NUM_TEAMS}teams.csv', 'w', encoding='ascii', newline='') as fp:
         table = DictWriter(fp, fieldnames=rows[0].keys())
         table.writeheader()
         table.writerows(rows)
@@ -501,22 +515,23 @@ def print_bye_weeks(games: List[Game]) -> None:
         not_playing = set(teams) - teams_playing
         assert len(not_playing) == 1
         date = DATES[week]
-        print(f'{date} - {SEASON_PREFIX}{list(not_playing)[0]:02d}')
+        print(f'{date} - {SEASON_PREFIX}{list(not_playing)[0]}')
 
 
 if __name__ == '__main__':
-    saved_file = Path(__file__).parent / 'schedule_12teams.pckl'
+    saved_file = Path(__file__).parent / \
+        f'schedule_{NUM_TEAMS}teams_{NUM_WEEKS}weeks.pckl'
 
     if saved_file.exists():
         with open(saved_file, 'rb') as fp:
             games: List[Game] = pickle.load(fp)
     else:
         print('Generating Schedule')
-        games = generate_schedule(num_weeks=11, num_teams=12)
+        games = generate_schedule(num_weeks=NUM_WEEKS, num_teams=NUM_TEAMS)
         with open(saved_file, 'wb') as fp:
             pickle.dump(games, fp, pickle.HIGHEST_PROTOCOL)
 
-    if EXHIBITION_WEEK:
+    if ADD_EXHIBITION_WEEK:
         for game in games:
             game.week = game.week + 1
 
@@ -592,8 +607,8 @@ if __name__ == '__main__':
             if sorted(rematch.teams) == sorted(game.teams):
                 print(game, 'vs', rematch)
 
-    # print_games_per_team(games)
-    generate_sheet_graphs(games)
-    generate_draw_graphs(games)
+    print_games_per_team(games)
+    # generate_sheet_graphs(games)
+    # generate_draw_graphs(games)
     write_out_sports_engine_csv(games)
-    # print_bye_weeks(games)
+    print_bye_weeks(games)
