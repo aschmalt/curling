@@ -1,0 +1,216 @@
+= A-B Bracket League
+
+== Summary
+
+The A-B Bracketing system is a method of organizing teams into two groups, Group A and Group B, based on the previous year's performance or peer rankings.  Throughout the season there will be opportunities for teams to move between the groups based on their performance.  1 team will move up/down between Group A & B mid-season in Fall & Winter.  Between Fall and Winter, 2 teams will move up/down between Group A & B.  This will allow for teams to compete against teams of similar skill levels while still having opportunities to play against teams of different skill levels a couple times a year.
+
+If schedule permits, the top teams from each group will have a playoff to determine the overall winner.  If schedule does not permit for a playoff, the top team from each group after the final round robin will be declared the winner.   A 3-week playoff schedule could replace the Spring League.
+
+=== Benefits
+
+. This will hopefully encourage teams to join Tuesday league as they will have opportunities to play against teams of similar skill levels and still have opportunities to play against teams of different skill levels.
+* In previous years, Tuesday league has [.underline]#not sold out#, so this could help increase the number of teams in the league.
+. If a team is outmatched in the Group A bracket, they will be able to move down to Group B so they are not discouraged playing a full season outside of their skill level.  Likewise if a team is dominating in Group B, they will be able to move up to Group A to further challenge themselves.
+. With A & B brackets, the league can support up to 14 teams (7 per bracket) where each team will only have 1 by per round robin.
+* In a traditional 14 team league, with 3 sheets, this can be challenging to schedule equitably.
+. Teams in the lower end of the Tuesday teams will still have engagement and opportunities to win the B bracket.
+. This will allow for a more competitive and fun environment for all teams involved across all skill levels.
+
+=== Downsides
+
+Due to the nature of the system:
+
+. Teams may not play against all other teams in the league.
+. Teams may not know their schedule for the entire season as teams may shift between brackets part way through the season.
+. For the Group A & B brackets, roughly equal number of early and late games may exist, but for teams that shift between brackets half way through the season, they may have more early or late games than they otherwise would within a season.
+
+=== Additional Details
+
+. By moving a team at half-season and 2 teams at half-year (between seasons), there is a greater chance that the top half of the teams will end up in Group A in the 2nd half of the Winter season allowing for a more accurate determination of the top teams in the league or competitive playoff.
+. There are potential cases where 3 teams may be tied and each beat one of the others, resulting in no clear head-to-head winner.  Breaking this 3 way tie could be handled a few different ways:
+* Keeping accurate score results and using overall point differential to determine the winner.
+* Having a draw to the button between the 3 teams to determine the winner.
+** Not clear when that would be done.
+* Game of chance (skips hold out a 1 or 2 and the odd skip out is the winner) to determine the winner.
+** There will be clear head-to-head winner of the resulting 2 teams.
+
+=== Following Years
+
+. Teams from Group A & the winner of Group B from previous year has early registration the following year.
+* Teams must consist of 3 previous year members to be eligible for early registration.
+* Teams that split and only have 2 original members, will register with the general registration and be considered an new team to the league.
+. Group A teams that early register will automatically be placed in the Group A the following year.
+* If a Group A team does not early register, the Group B winner will be placed in Group A (if they early register).
+* If there are open Group A slots after early registration, they will be filled using peer rankings of the general registration teams.
+. General registration will open after early registration closes and any teams in general registration will be treated as a new team to the league subject to Group A/B placement based on peer rankings and Group A availability.
+
+== Example Case
+
+This covers 4 round-robins with 6 teams in each group.  The final round leads into the playoff brackets.  In the randomized results in the below example case show the progression of the teams through the seasons and playoffs.
+
+=== Round-Robin 1 - Fall 1st Half
+
+**Group A**: Team 01, Team 02, Team 03, Team 04, Team 05, Team 06
+
+**Group B**: Team 07, Team 08, Team 09, Team 10, Team 11, Team 12
+
+**Results A**:
+
+. Team 03: 4 wins, 2 losses, beat: Team 02, Team 04, Team 05, Team 06
+. Team 06: 4 wins, 2 losses, beat: Team 01, Team 02, Team 04, Team 05
+. Team 01: 3 wins, 3 losses, beat: Team 03, Team 04, Team 05
+. Team 02: 2 wins, 4 losses, beat: Team 01, Team 04
+. Team 05: 2 wins, 4 losses, beat: Team 02, Team 04
+. Team 04: 0 wins, 6 losses
+
+**Results B**:
+
+. Team 08: 3 wins, 3 losses, beat: Team 07, Team 09, Team 10
+. Team 09: 3 wins, 3 losses, beat: Team 07, Team 11, Team 12
+. Team 10: 3 wins, 3 losses, beat: Team 07, Team 09, Team 12
+. Team 11: 3 wins, 3 losses, beat: Team 08, Team 10, Team 12
+. Team 12: 2 wins, 4 losses, beat: Team 07, Team 08
+. Team 07: 1 wins, 5 losses, beat: Team 11
+
+=== Round-Robin 2 - Fall 2nd Half
+
+**Group A**: Team 01, Team 02, Team 03, Team 05, Team 06, Team 08
+
+**Group B**: Team 04, Team 07, Team 09, Team 10, Team 11, Team 12
+
+**Results A**:
+
+. Team 03: 3 wins, 3 losses, beat: Team 06, Team 01, Team 08
+. Team 05: 3 wins, 3 losses, beat: Team 03, Team 06, Team 08
+. Team 02: 3 wins, 3 losses, beat: Team 03, Team 06, Team 05
+. Team 06: 2 wins, 4 losses, beat: Team 01, Team 08
+. Team 01: 2 wins, 4 losses, beat: Team 05, Team 02
+. Team 08: 2 wins, 4 losses, beat: Team 01, Team 02
+
+**Results B**:
+
+. Team 04: 4 wins, 2 losses, beat: Team 11, Team 09, Team 12, Team 07
+. Team 07: 4 wins, 2 losses, beat: Team 11, Team 09, Team 10, Team 12
+. Team 11: 2 wins, 4 losses, beat: Team 09, Team 10
+. Team 10: 2 wins, 4 losses, beat: Team 04, Team 12
+. Team 12: 2 wins, 4 losses, beat: Team 11, Team 09
+. Team 09: 1 wins, 5 losses, beat: Team 10
+
+=== Round-Robin 3 - Winter 1st Half
+
+**Group A**: Team 02, Team 03, Team 04, Team 05, Team 06, Team 07
+
+**Group B**: Team 01, Team 08, Team 09, Team 10, Team 11, Team 12
+
+**Results A**:
+
+. Team 04: 4 wins, 2 losses, beat: Team 02, Team 05, Team 03, Team 06
+. Team 03: 3 wins, 3 losses, beat: Team 05, Team 06, Team 07
+. Team 07: 3 wins, 3 losses, beat: Team 02, Team 06, Team 04
+. Team 02: 2 wins, 4 losses, beat: Team 05, Team 03
+. Team 06: 2 wins, 4 losses, beat: Team 02, Team 05
+. Team 05: 1 wins, 5 losses, beat: Team 07
+
+**Results B**:
+
+. Team 01: 4 wins, 2 losses, beat: Team 11, Team 10, Team 12, Team 09
+. Team 09: 4 wins, 2 losses, beat: Team 08, Team 11, Team 10, Team 12
+. Team 08: 3 wins, 3 losses, beat: Team 01, Team 11, Team 12
+. Team 10: 3 wins, 3 losses, beat: Team 08, Team 11, Team 12
+. Team 12: 1 wins, 5 losses, beat: Team 11
+. Team 11: 0 wins, 6 losses
+
+=== Round-Robin 4 - Winter 2nd Half
+
+**Group A**: Team 01, Team 02, Team 03, Team 04, Team 06, Team 07
+
+**Group B**: Team 05, Team 08, Team 09, Team 10, Team 11, Team 12
+
+**Results A**:
+
+. Team 06: 5 wins, 1 losses, beat: Team 04, Team 03, Team 07, Team 02, Team 01
+. Team 04: 4 wins, 2 losses, beat: Team 03, Team 07, Team 02, Team 01
+. Team 07: 2 wins, 4 losses, beat: Team 02, Team 01
+. Team 01: 2 wins, 4 losses, beat: Team 03, Team 02
+. Team 03: 1 wins, 5 losses, beat: Team 07
+. Team 02: 1 wins, 5 losses, beat: Team 03
+
+**Results B**:
+
+. Team 10: 4 wins, 2 losses, beat: Team 09, Team 08, Team 12, Team 11
+. Team 05: 3 wins, 3 losses, beat: Team 09, Team 10, Team 12
+. Team 09: 2 wins, 4 losses, beat: Team 08, Team 12
+. Team 08: 2 wins, 4 losses, beat: Team 05, Team 11
+. Team 12: 2 wins, 4 losses, beat: Team 08, Team 11
+. Team 11: 2 wins, 4 losses, beat: Team 05, Team 09
+
+
+=== Playoffs
+
+Due to 6 teams in each group, the top 4 teams from each group will advance to the playoffs.  The top 2 teams from each group in Round 4 (Winter 2nd Half) will have a bye in the first round of the playoffs and play an exhibition game against each other.  The 3rd place team will play the 6th place team, and the 4th place team will play the 5th place team.  The winners of the playoff games will advance to the next round.  The losers of the playoff games will play each other in an exhibition game.
+
+In round 2, the highest ranking winner of the playoff games will play the 2nd place team, and the lowest ranking team will play the first place team.   The losers of the Round 1 Playoff games will play each other in an exhibition game.
+
+In round 3, the winners of the Round 2 Playoff games will play each other in the championship game.  The losers of the playoff games will play each other in an exhibition game - drawn up not to repeat any games from the previous rounds.
+
+==== Playoff Round 1
+
+**Group A**:
+
+* Team 06 vs Team 04 (Exhibition Game)
+* Team 07 vs Team 02
+* Team 01 vs Team 03
+
+**Group B**:
+
+* Team 10 vs Team 05 (Exhibition Game)
+* Team 09 vs Team 11
+* Team 08 vs Team 12
+
+**Results A**:
+
+* Team 02 beat Team 07
+* Team 01 beat Team 03
+
+**Results B**:
+
+* Team 09 beat Team 11
+* Team 08 beat Team 12
+
+==== Playoff Round 2
+
+**Group A**:
+
+* Team 06 vs Team 02 (Team 02 ranked lower than Team 01)
+* Team 04 vs Team 01
+* Team 03 vs Team 07 (Exhibition Game)
+
+**Group B**:
+
+* Team 10 vs Team 08 (Team 08 ranked lower than Team 09)
+* Team 05 vs Team 09
+* Team 11 vs Team 12 (Exhibition Game)
+
+**Results A**:
+
+* Team 06 beat Team 02
+* Team 04 beat Team 01
+
+**Results B**:
+
+* Team 10 beat Team 08
+* Team 09 beat Team 05
+
+==== Playoff Round 3
+
+**Group A**:
+
+* Team 06 vs Team 04 (Championship Game)
+* Team 07 vs Team 01 (Exhibition Game)
+* Team 03 vs Team 02 (Exhibition Game)
+
+**Group B**:
+
+* Team 10 vs Team 09 (Championship Game)
+* Team 08 vs Team 11 (Exhibition Game)
+* Team 05 vs Team 12 (Exhibition Game)
