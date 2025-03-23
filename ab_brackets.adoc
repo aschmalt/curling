@@ -59,21 +59,26 @@ This example shows 4 round-robins (2 in Fall, 2 in Winter) with 6 teams in Group
 
 **Results A**:
 
-. Team 03: 4 wins, 2 losses, beat: Team 02, Team 04, Team 05, Team 06
-. Team 06: 4 wins, 2 losses, beat: Team 01, Team 02, Team 04, Team 05
-. Team 01: 3 wins, 3 losses, beat: Team 03, Team 04, Team 05
-. Team 02: 2 wins, 4 losses, beat: Team 01, Team 04
-. Team 05: 2 wins, 4 losses, beat: Team 02, Team 04
-. Team 04: 0 wins, 6 losses
+. Team 03: 4 wins, 1 losses, beat: Team 02, Team 04, Team 05, Team 06
+. Team 06: 4 wins, 1 losses, beat: Team 01, Team 02, Team 04, Team 05
+. Team 01: 3 wins, 2 losses, beat: Team 03, Team 04, Team 05
+. Team 02: 2 wins, 3 losses, beat: Team 01, Team 04
+. Team 05: 2 wins, 3 losses, beat: Team 02, Team 04
+. Team 04: 0 wins, 5 losses
 
 **Results B**:
 
-. Team 08: 3 wins, 3 losses, beat: Team 07, Team 09, Team 10
-. Team 09: 3 wins, 3 losses, beat: Team 07, Team 11, Team 12
-. Team 10: 3 wins, 3 losses, beat: Team 07, Team 09, Team 12
-. Team 11: 3 wins, 3 losses, beat: Team 08, Team 10, Team 12
-. Team 12: 2 wins, 4 losses, beat: Team 07, Team 08
-. Team 07: 1 wins, 5 losses, beat: Team 11
+. Team 08: 3 wins, 2 losses, beat: Team 07, Team 09, Team 10
+. Team 09: 3 wins, 2 losses, beat: Team 07, Team 11, Team 12
+. Team 10: 3 wins, 2 losses, beat: Team 07, Team 09, Team 12
+. Team 11: 3 wins, 2 losses, beat: Team 08, Team 10, Team 12
+. Team 12: 2 wins, 3 losses, beat: Team 07, Team 08
+. Team 07: 1 wins, 4 losses, beat: Team 11
+
+**Mid-Season Movement**:
+
+* Team 08 moves from Group B to Group A
+* Team 04 moves from Group A to Group B
 
 === Round-Robin 2 - Fall 2nd Half
 
@@ -83,21 +88,28 @@ This example shows 4 round-robins (2 in Fall, 2 in Winter) with 6 teams in Group
 
 **Results A**:
 
-. Team 02: 3 wins, 3 losses, beat: Team 03, Team 06, Team 05
-. Team 05: 3 wins, 3 losses, beat: Team 03, Team 06, Team 08
-. Team 03: 3 wins, 3 losses, beat: Team 06, Team 01, Team 08
-. Team 06: 2 wins, 4 losses, beat: Team 01, Team 08
-. Team 08: 2 wins, 4 losses, beat: Team 01, Team 02
-. Team 01: 2 wins, 4 losses, beat: Team 05, Team 02
+. Team 02: 3 wins, 2 losses, beat: Team 03, Team 06, Team 05
+. Team 05: 3 wins, 2 losses, beat: Team 03, Team 06, Team 08
+. Team 03: 3 wins, 2 losses, beat: Team 06, Team 01, Team 08
+. Team 06: 2 wins, 3 losses, beat: Team 01, Team 08
+. Team 08: 2 wins, 3 losses, beat: Team 01, Team 02
+. Team 01: 2 wins, 3 losses, beat: Team 05, Team 02
 
 **Results B**:
 
-. Team 04: 4 wins, 2 losses, beat: Team 11, Team 09, Team 12, Team 07
-. Team 07: 4 wins, 2 losses, beat: Team 11, Team 09, Team 10, Team 12
-. Team 11: 2 wins, 4 losses, beat: Team 09, Team 10
-. Team 10: 2 wins, 4 losses, beat: Team 04, Team 12
-. Team 12: 2 wins, 4 losses, beat: Team 11, Team 09
-. Team 09: 1 wins, 5 losses, beat: Team 10
+. Team 04: 4 wins, 1 losses, beat: Team 11, Team 09, Team 12, Team 07
+. Team 07: 4 wins, 1 losses, beat: Team 11, Team 09, Team 10, Team 12
+. Team 11: 2 wins, 3 losses, beat: Team 09, Team 10
+. Team 10: 2 wins, 3 losses, beat: Team 04, Team 12
+. Team 12: 2 wins, 3 losses, beat: Team 11, Team 09
+. Team 09: 1 wins, 4 losses, beat: Team 10
+
+**Mid-Year Movement**:
+
+* Team 04 moves from Group B to Group A
+* Team 07 moves from Group B to Group A
+* Team 08 moves from Group A to Group B
+* Team 01 moves from Group A to Group B
 
 === Round-Robin 3 - Winter 1st Half
 
@@ -107,21 +119,26 @@ This example shows 4 round-robins (2 in Fall, 2 in Winter) with 6 teams in Group
 
 **Results A**:
 
-. Team 04: 4 wins, 2 losses, beat: Team 02, Team 05, Team 03, Team 06
-. Team 03: 3 wins, 3 losses, beat: Team 05, Team 06, Team 07
-. Team 07: 3 wins, 3 losses, beat: Team 02, Team 06, Team 04
-. Team 02: 2 wins, 4 losses, beat: Team 05, Team 03
-. Team 06: 2 wins, 4 losses, beat: Team 02, Team 05
-. Team 05: 1 wins, 5 losses, beat: Team 07
+. Team 04: 4 wins, 1 losses, beat: Team 02, Team 05, Team 03, Team 06
+. Team 03: 3 wins, 2 losses, beat: Team 05, Team 06, Team 07
+. Team 07: 3 wins, 2 losses, beat: Team 02, Team 06, Team 04
+. Team 02: 2 wins, 3 losses, beat: Team 05, Team 03
+. Team 06: 2 wins, 3 losses, beat: Team 02, Team 05
+. Team 05: 1 wins, 4 losses, beat: Team 07
 
 **Results B**:
 
-. Team 01: 4 wins, 2 losses, beat: Team 11, Team 10, Team 12, Team 09
-. Team 09: 4 wins, 2 losses, beat: Team 08, Team 11, Team 10, Team 12
-. Team 08: 3 wins, 3 losses, beat: Team 01, Team 11, Team 12
-. Team 10: 3 wins, 3 losses, beat: Team 08, Team 11, Team 12
-. Team 12: 1 wins, 5 losses, beat: Team 11
-. Team 11: 0 wins, 6 losses
+. Team 01: 4 wins, 1 losses, beat: Team 11, Team 10, Team 12, Team 09
+. Team 09: 4 wins, 1 losses, beat: Team 08, Team 11, Team 10, Team 12
+. Team 08: 3 wins, 2 losses, beat: Team 01, Team 11, Team 12
+. Team 10: 3 wins, 2 losses, beat: Team 08, Team 11, Team 12
+. Team 12: 1 wins, 4 losses, beat: Team 11
+. Team 11: 0 wins, 5 losses
+
+**Mid-Season Movement**:
+
+* Team 01 moves from Group B to Group A
+* Team 05 moves from Group A to Group B
 
 === Round-Robin 4 - Winter 2nd Half
 
@@ -131,22 +148,21 @@ This example shows 4 round-robins (2 in Fall, 2 in Winter) with 6 teams in Group
 
 **Results A**:
 
-. Team 06: 5 wins, 1 losses, beat: Team 04, Team 03, Team 07, Team 02, Team 01
-. Team 04: 4 wins, 2 losses, beat: Team 03, Team 07, Team 02, Team 01
-. Team 07: 2 wins, 4 losses, beat: Team 02, Team 01
-. Team 01: 2 wins, 4 losses, beat: Team 03, Team 02
-. Team 03: 2 wins, 5 losses, beat: Team 07, Team 02
-. Team 02: 0 wins, 6 losses
+. Team 06: 5 wins, 0 losses, beat: Team 04, Team 03, Team 07, Team 02, Team 01
+. Team 04: 4 wins, 1 losses, beat: Team 03, Team 07, Team 02, Team 01
+. Team 07: 2 wins, 3 losses, beat: Team 02, Team 01
+. Team 01: 2 wins, 3 losses, beat: Team 03, Team 02
+. Team 03: 2 wins, 4 losses, beat: Team 07, Team 02
+. Team 02: 0 wins, 5 losses
 
 **Results B**:
 
-. Team 10: 4 wins, 2 losses, beat: Team 09, Team 08, Team 12, Team 11
-. Team 05: 3 wins, 3 losses, beat: Team 09, Team 10, Team 12
-. Team 09: 3 wins, 4 losses, beat: Team 08, Team 11, Team 12
-. Team 12: 2 wins, 4 losses, beat: Team 08, Team 11
-. Team 08: 2 wins, 4 losses, beat: Team 05, Team 11
-. Team 11: 1 wins, 5 losses, beat: Team 05
-
+. Team 10: 4 wins, 1 losses, beat: Team 09, Team 08, Team 12, Team 11
+. Team 05: 3 wins, 2 losses, beat: Team 09, Team 10, Team 12
+. Team 09: 3 wins, 3 losses, beat: Team 08, Team 11, Team 12
+. Team 12: 2 wins, 3 losses, beat: Team 08, Team 11
+. Team 08: 2 wins, 3 losses, beat: Team 05, Team 11
+. Team 11: 1 wins, 4 losses, beat: Team 05
 
 === Playoffs
 
