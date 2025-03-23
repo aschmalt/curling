@@ -33,9 +33,9 @@ Due to the nature of the A-B Bracket system:
 ** Not clear when that would be done.
 * Game of chance (skips hold out a 1 or 2 and the odd skip out is the winner) to determine the winner.
 ** There will be clear head-to-head winner of the resulting 2 teams.
-. If a team drops out of the league between Fall & Winter leagues, highest ranked team from Group B will move up to Group A.
+. If a team drops out of the league from Group A between Fall & Winter leagues, highest ranked team from Group B will move up to Group A.
 * This will be done after the 2 teams are moved between Group A & B, so a team that moved down from A may get bumped back up to A.
-* Any new teams joining in Winter will be added to Group B.
+. Any new teams joining in Winter will be added to Group B.
 
 === Following Years
 
