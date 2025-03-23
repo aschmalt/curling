@@ -2,7 +2,7 @@
 
 == Summary
 
-The A-B Bracketing system is a method of organizing teams into two groups, Group A and Group B, based on the previous year's performance or peer rankings.  Throughout the season there will be opportunities for teams to move between the groups based on their performance.  1 team will move up/down between Group A & B mid-season in Fall & Winter.  Between Fall and Winter, 2 teams will move up/down between Group A & B.  This will allow for teams to compete against teams of similar skill levels while still having opportunities to play against teams of different skill levels a couple times a year.
+The A-B Bracketing system is a method of organizing teams into two groups, Group A and Group B, based on the previous year's performance or peer rankings.  Throughout the season there will be opportunities for teams to move between the groups based on their performance.  1 team will move up/down between Group A & B in Fall & Winter (mid-season).  2 teams will move up/down between Group A & B between Fall & Winter seasons (mid-year).  This will allow for teams to compete against teams of similar skill levels while still having opportunities to play against teams of different skill levels a couple times a year.
 
 If schedule permits, the top teams from each group will have a playoff to determine the overall winner.  If schedule does not permit for a playoff, the top team from each group after the final round robin will be declared the winner.   A 3-week playoff schedule could replace the Spring League.
 
@@ -10,15 +10,15 @@ If schedule permits, the top teams from each group will have a playoff to determ
 
 . This will hopefully encourage teams to join Tuesday league as they will have opportunities to play against teams of similar skill levels and still have opportunities to play against teams of different skill levels.
 * In previous years, Tuesday league has [.underline]#not sold out#, so this could help increase the number of teams in the league.
-. If a team is outmatched in the Group A bracket, they will be able to move down to Group B so they are not discouraged playing a full season outside of their skill level.  Likewise if a team is dominating in Group B, they will be able to move up to Group A to further challenge themselves.
-. With A & B brackets, the league can support up to 14 teams (7 per bracket) where each team will only have 1 by per round robin.
+. If a team is outmatched in the Group A bracket, they will be able to move down to Group B, so they are not discouraged playing a full season outside of their skill level.  Likewise, if a team is dominating in Group B, they will be able to move up to Group A to further challenge themselves.
+. With A & B brackets, the league can support up to 14 teams (7 per bracket) where each team will only have 1 bye per round robin.
 * In a traditional 14 team league, with 3 sheets, this can be challenging to schedule equitably.
-. Teams in the lower end of the Tuesday teams will still have engagement and opportunities to win the B bracket.
+. Teams in the lower half of the Tuesday league will still have engagement and opportunities to win the B bracket.
 . This will allow for a more competitive and fun environment for all teams involved across all skill levels.
 
 === Downsides
 
-Due to the nature of the system:
+Due to the nature of the A-B Bracket system:
 
 . Teams may not play against all other teams in the league.
 . Teams may not know their schedule for the entire season as teams may shift between brackets part way through the season.
@@ -33,12 +33,15 @@ Due to the nature of the system:
 ** Not clear when that would be done.
 * Game of chance (skips hold out a 1 or 2 and the odd skip out is the winner) to determine the winner.
 ** There will be clear head-to-head winner of the resulting 2 teams.
+. If a team drops out of the league between Fall & Winter leagues, highest ranked team from Group B will move up to Group A.
+* This will be done after the 2 teams are moved between Group A & B, so a team that moved down from A may get bumped back up to A.
+* Any new teams joining in Winter will be added to Group B.
 
 === Following Years
 
 . Teams from Group A & the winner of Group B from previous year has early registration the following year.
 * Teams must consist of 3 previous year members to be eligible for early registration.
-* Teams that split and only have 2 original members, will register with the general registration and be considered an new team to the league.
+* Teams that split and only have 2 original members, will register with the general registration and be considered a new team to the league.
 . Group A teams that early register will automatically be placed in the Group A the following year.
 * If a Group A team does not early register, the Group B winner will be placed in Group A (if they early register).
 * If there are open Group A slots after early registration, they will be filled using peer rankings of the general registration teams.
@@ -46,7 +49,7 @@ Due to the nature of the system:
 
 == Example Case
 
-This covers 4 round-robins with 6 teams in each group.  The final round leads into the playoff brackets.  In the randomized results in the below example case show the progression of the teams through the seasons and playoffs.
+This example shows 4 round-robins (2 in Fall, 2 in Winter) with 6 teams in Group A and 6 teams in Group B.  The final (4th) Round leads into the playoff brackets.  In the example below the results were randomized to show how the progression of the teams would look through the seasons and playoffs for a given year.
 
 === Round-Robin 1 - Fall 1st Half
 
@@ -147,11 +150,11 @@ This covers 4 round-robins with 6 teams in each group.  The final round leads in
 
 === Playoffs
 
-Due to 6 teams in each group, the top 4 teams from each group will advance to the playoffs.  The top 2 teams from each group in Round 4 (Winter 2nd Half) will have a bye in the first round of the playoffs and play an exhibition game against each other.  The 3rd place team will play the 6th place team, and the 4th place team will play the 5th place team.  The winners of the playoff games will advance to the next round.  The losers of the playoff games will play each other in an exhibition game.
+Due to 6 teams in each group, the top 4 teams from each group will advance to the playoffs.
 
-In round 2, the highest ranking winner of the playoff games will play the 2nd place team, and the lowest ranking team will play the first place team.   The losers of the Round 1 Playoff games will play each other in an exhibition game.
-
-In round 3, the winners of the Round 2 Playoff games will play each other in the championship game.  The losers of the playoff games will play each other in an exhibition game - drawn up not to repeat any games from the previous rounds.
+* In **Playoff Round 1**, the top 2 teams from each group in Round 4 (Winter 2nd Half) will have a bye in the first round of the playoffs and play an exhibition game against each other.  The 3rd place team will play the 6th place team, and the 4th place team will play the 5th place team.  The winners of the playoff games will advance to the next round.  The losers of the playoff games will play each other in an exhibition game.
+* In **Playoff Round 2**, the highest ranking winner of the playoff games will play the 2nd place team, and the lowest ranking team will play the first place team.   The losers of the Round 1 Playoff games will play each other in an exhibition game.
+* In **Playoff Round 3**, the winners of the Round 2 Playoff games will play each other in the championship game.  The losers of the playoff games will play each other in an exhibition game - drawn up not to repeat any games from the previous rounds.
 
 ==== Playoff Round 1
 
