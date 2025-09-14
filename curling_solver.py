@@ -1,4 +1,3 @@
-from typing import List, Union, Dict, Optional, Tuple, Set
 from pathlib import Path
 import sys
 import math
@@ -17,42 +16,28 @@ EVENT_IDS = []
 # NUM_WEEKS = 11
 # ADD_EXHIBITION_WEEK = True
 
-SEASON_PREFIX = '24HW'
-DATES = ('2025-01-09',
-         '2025-01-16',
-         '2025-01-23',
-         '2025-01-30',
-         '2025-02-06',
-         '2025-02-13',
-         '2025-02-20',
-         '2025-02-27',
-         '2025-03-06',
-         '2025-03-13',
-         '2025-03-20',
-         '2025-03-27',
-         '2025-04-03')
+SEASON_PREFIX = '25HF'
+DATES = ('2025-09-25',
+         '2025-10-02',
+         '2025-10-09',
+         '2025-10-16',
+         '2025-10-23',
+         '2025-10-30',
+         '2025-11-06',
+         '2025-11-13',
+         '2025-11-20',
+         '2025-12-04',
+         '2025-12-11',
+         '2025-12-18'
+         '2025-09-12')  # flex game
 
-# SEASON_PREFIX = '24TF'
-# DATES = (  # '2024-09-24',
-#     '2024-10-01',
-#     '2024-10-08',
-#     '2024-10-15',
-#     '2024-10-22',
-#     '2024-10-29',
-#     '2024-11-05',
-#     '2024-11-12',
-#     '2024-11-19',
-#     '2024-11-26',
-#     '2024-12-03',
-#     '2024-12-10',
-#     '2025-12-17')
 
 TIMES = (('18:00:00', '20:00:00'), ('20:30:00', '22:30:00'))
 SHEET_NAMES = ('Sheet A', 'Sheet B', 'Sheet C')
 
 
 class Game():
-    def __init__(self, home: Union[int, str], away: Union[int, str], week: int, draw: int, sheet: int, exhibition: bool = False) -> None:
+    def __init__(self, home: int | str, away: int | str, week: int, draw: int, sheet: int, exhibition: bool = False) -> None:
         self._home = home
         self._away = away
         self.week = week
@@ -73,15 +58,15 @@ class Game():
         return self._away
 
     @home.setter
-    def home(self, value: Union[int, str]):
+    def home(self, value: int | str):
         self._home = value
 
     @away.setter
-    def away(self, value: Union[int, str]):
+    def away(self, value: int | str):
         self._away = value
 
     @property
-    def teams(self) -> Tuple[str, str]:
+    def teams(self) -> tuple[str, str]:
         return (self.home, self.away)
 
     def __str__(self):
@@ -135,16 +120,16 @@ class Schedule():
                 week.append(game)
             self._schedule.append(week)
 
-    def games_in_week(self, week: int) -> List[Game]:
+    def games_in_week(self, week: int) -> list[Game]:
         return self._schedule[week]
 
-    def games_in_season(self) -> List[Game]:
+    def games_in_season(self) -> list[Game]:
         all = list()
         for w in self.weeks:
             all.extend(self.games_in_week(w))
         return all
 
-    def set_bounds(self) -> Union[z3.BoolRef, z3.Probe]:
+    def set_bounds(self) -> z3.BoolRef | z3.Probe:
         facts = list()
         # set bounds of values
         for w in self.weeks:
@@ -182,7 +167,7 @@ class Schedule():
 
         return z3.And(*facts)
 
-    def set_games_per_team_per_week(self) -> Union[z3.BoolRef, z3.Probe]:
+    def set_games_per_team_per_week(self) -> z3.BoolRef | z3.Probe:
         min_games = 0 if self._byes else self._min_games_against_each_team
         max_games = self._max_games_against_each_team
         facts = list()
@@ -294,7 +279,7 @@ class Schedule():
         return z3.And(*facts)
 
 
-def generate_schedule(num_weeks: int, num_teams: int, num_draws: int = 2, num_sheets: int = 3) -> List[Game]:
+def generate_schedule(num_weeks: int, num_teams: int, num_draws: int = 2, num_sheets: int = 3) -> list[Game]:
     schedule = Schedule(num_weeks=num_weeks, num_teams=num_teams,
                         num_draws=num_draws, num_sheets=num_sheets)
     solver = z3.Solver()
@@ -336,7 +321,7 @@ def generate_schedule(num_weeks: int, num_teams: int, num_draws: int = 2, num_sh
     return games
 
 
-def print_games_per_team(games: List[Game]) -> None:
+def print_games_per_team(games: list[Game]) -> None:
     teams = get_teams(games)
     weeks = get_weeks(games)
     for team in sorted(teams):
@@ -353,27 +338,27 @@ def print_games_per_team(games: List[Game]) -> None:
         print('')
 
 
-def get_teams(games: List[Game]) -> List[str]:
+def get_teams(games: list[Game]) -> list[str]:
     teams = set([x.home for x in games] + [x.away for x in games])
     return sorted(teams)
 
 
-def get_weeks(games: List[Game]) -> List[int]:
+def get_weeks(games: list[Game]) -> list[int]:
     weeks = set([x.week for x in games])
     return sorted(weeks)
 
 
-def get_sheets(games: List[Game]) -> List[int]:
+def get_sheets(games: list[Game]) -> list[int]:
     sheets = set([x.sheet for x in games])
     return sorted(sheets)
 
 
-def get_draws(games: List[Game]) -> List[int]:
+def get_draws(games: list[Game]) -> list[int]:
     draws = set([x.draw for x in games])
     return sorted(draws)
 
 
-def count_sheet_appearances(games: List[Game]) -> Dict[int, List[int]]:
+def count_sheet_appearances(games: list[Game]) -> dict[int, list[int]]:
     teams = get_teams(games)
     sheets = get_sheets(games)
     sheet_counts = {team: [0] * len(sheets) for team in teams}
@@ -384,7 +369,7 @@ def count_sheet_appearances(games: List[Game]) -> Dict[int, List[int]]:
     return sheet_counts
 
 
-def count_draw_appearances(games: List[Game]) -> Dict[int, List[int]]:
+def count_draw_appearances(games: list[Game]) -> dict[int, list[int]]:
     teams = get_teams(games)
     draws = get_draws(games)
     draw_counts = {team: [0] * len(draws) for team in teams}
@@ -395,7 +380,7 @@ def count_draw_appearances(games: List[Game]) -> Dict[int, List[int]]:
     return draw_counts
 
 
-def generate_sheet_graphs(games: List[Game]) -> None:
+def generate_sheet_graphs(games: list[Game]) -> None:
     # Generate sheet appearance counts
     sheet_counts = count_sheet_appearances(games)
     teams = get_teams(games)
@@ -422,7 +407,7 @@ def generate_sheet_graphs(games: List[Game]) -> None:
     plt.show()
 
 
-def generate_draw_graphs(games: List[Game]) -> None:
+def generate_draw_graphs(games: list[Game]) -> None:
     # Generate slot appearance counts
     slot_counts = count_draw_appearances(games)
     teams = get_teams(games)
@@ -454,9 +439,9 @@ def get_row_data(date: str,
                  start_time: str,
                  end_time: str,
                  location: str,
-                 team1: Optional[str] = None,
-                 team2: Optional[str] = None,
-                 event_id: Optional[str] = None) -> Dict[str, str]:
+                 team1: str | None = None,
+                 team2: str | None = None,
+                 event_id: str | None = None) -> dict[str, str]:
     row = {'Format': 'SportsEngine',
            'Start_Date': date,
            'Start_Time': start_time,
@@ -480,8 +465,8 @@ def get_row_data(date: str,
     return row
 
 
-def write_out_sports_engine_csv(games: List[Game]) -> None:
-    rows: List[Dict[str, str]] = list()
+def write_out_sports_engine_csv(games: list[Game]) -> None:
+    rows: list[dict[str, str]] = list()
     # Excel format is %Y-%m-%d %H:%M:%S
 
     event_idx = 0
@@ -502,7 +487,7 @@ def write_out_sports_engine_csv(games: List[Game]) -> None:
         table.writerows(rows)
 
 
-def print_bye_weeks(games: List[Game]) -> None:
+def print_bye_weeks(games: list[Game]) -> None:
     weeks = get_weeks(games)
     teams = get_teams(games)
     for week in weeks:
@@ -524,7 +509,7 @@ if __name__ == '__main__':
 
     if saved_file.exists():
         with open(saved_file, 'rb') as fp:
-            games: List[Game] = pickle.load(fp)
+            games: list[Game] = pickle.load(fp)
     else:
         print('Generating Schedule')
         games = generate_schedule(num_weeks=NUM_WEEKS, num_teams=NUM_TEAMS)
@@ -535,8 +520,8 @@ if __name__ == '__main__':
         for game in games:
             game.week = game.week + 1
 
-        def get_2_teams_for_exhibition(games: List[Game], sheet: int, draw: int):
-            already_playing: Set[str] = set()
+        def get_2_teams_for_exhibition(games: list[Game], sheet: int, draw: int):
+            already_playing: set[str] = set()
             for game in games:
                 if game.week == 0:
                     already_playing.add(game.away)
@@ -548,7 +533,7 @@ if __name__ == '__main__':
             sheets = get_sheets(games)
             draws = get_draws(games)
 
-            games_played: Dict[str, Dict[str, Dict[int, int]]] = dict()
+            games_played: dict[str, dict[str, dict[int, int]]] = dict()
             for game in games:
                 for team in [game.home, game.away]:
                     # if team not in teams:
@@ -560,7 +545,7 @@ if __name__ == '__main__':
                     games_played[team]['draws'][game.draw] = games_played[team]['draws'][game.draw] + 1
 
             # get teams if lowest draw equal to draw
-            matching_draw: Set[str] = set()
+            matching_draw: set[str] = set()
             for team in teams:
                 draws = games_played[team]['draws']
 
@@ -568,7 +553,7 @@ if __name__ == '__main__':
                     matching_draw.add(team)
 
             # get teams if lowest draw equal to draw
-            matching_sheet: Set[str] = set()
+            matching_sheet: set[str] = set()
             for team in teams:
                 sheets = games_played[team]['sheets']
 
