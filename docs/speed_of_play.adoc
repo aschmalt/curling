@@ -1,0 +1,114 @@
+= Speed of Play
+:toc:
+:sectnums:
+
+Speed of play is a common concern in ECC curling leagues. This document proposes a method to incentivize improved speed of play by awarding additional points based on the number of ends played in a game.
+
+== Proposal of Ends-Played Points to Incentivize Improved Speed of Play
+
+Proposal is to encourage 8 ends in 2 hours with a small points modifier to the current win/loss/tie point system for both teams.
+
+=== Current Points Determinations:
+
+Each game won: 2 points
+Each game tied: 1 point
+Each game lost: 0 points
+Proposed Additional Point Modifiers:
+Maintain current point determinations for win/loss record and add an additional modifier accounting for ends-played, rewarding more ends and penalizing fewer ends*
+*Early hand shakes would not be penalized with points unless accompanied by slow play. A full description of addressing early-hand-shakes is below.
+
+Each game with 8 ends played: +0.25 points
+Each game with 7 ends played: 0 points (no modifier)
+
+The league bell rule would not be modified. The bell would be set to 1 hour and 35 minutes after the start of play. At the time of the bell, all games must finish the end they’re in and may play one more end. An end does not begin until the first delivered stone of the end crosses the near tee-line.
+
+Over the course of a 12 week league, teams may accrue up to 3 additional points by reaching the 8th end in each game (and may lose up to to 3 points with consistent slow play). Seven ends is considered the standard and games that reach the 7th end but not the 8th do not have a point modification.
+
+=== Reporting
+
+Skips will report the number of ends played (if no early concession) with the outcome of the game to the league coordinator. The modifier will apply to both teams in a game. If you lost an 8 end game, you will accrue 0.25 points that week and the opposition will gain 2.25 points.
+
+==== Early Concession
+
+If a team concedes early, apply the 15 minutes per end rule to extrapolate the number of ends that would have been played if the game had continued to the bell.
+For example, if a team concedes after 5 ends and only (or less than) 1 hour & 15 minutes elapsed, the game is extrapolated to 8 ends played in 2 hours and both teams receive +0.25 points.  If more than 1 hour & 15 minutes elapsed, the game is extrapolated to 7 ends played in 2 hours and no additional points are applied.
+
+Most concessions are within 1 end of the bell, so this should generally be able to be resolved without dispute. If teams do not agree on the extrapolated number of ends that would have been played, no additional points will be applied. Teams may review the stream to validate their agreement on the number of ends.
+Teams are not expected to use early concession to accrue (or avoid losing) the modifier
+
+=== Rationale
+
+A frequent complaint of league play in many clubs and leagues is the pace of play. Adding a small, but cumulative, point modification based on pace may help quantify the benefits of playing quickly, as well as provide an incentive for slower teams to improve their pace of play. A small modification can accumulate for or against a team with consistent performance above the average (7) ends. These modifications may also help teams understand how their pace compares to the average of the league.
+
+The modifier of +/- 0.25 points was chosen to be large enough to have cumulative power to meaningfully affect a team’s ranking in the standings without being so powerful that it would unduly burden a slow+skilled team or benefit a quick+poor team. It is the maximum equivalent of the impact of 1 win + 1 tie over the course of the season. (Having the best DSC in a competition is commonly considered to be roughly equivalent to winning an extra game in round robin play, which is usually < 12 games). It is not likely any team will accrue the full 3 point modifier available.
+
+== How to improve your Speed of Play
+
+=== Leads
+
+. Know if your team scored or not.
+
+==== If your team scored:
+
+* If your stone is a counting stone, wait for the score to be called and then grab your first stone.
+* If your stone is not a counting stone, grab your first stone and get in the hack as soon as possible.
+
+==== If your team did not score:
+
+* Along with the Seconds and Vices, help clear the stones from the house **after the score is called**.
+
+=== Leads, Seconds, Vices
+
+* Once the opponent has released their rock, get ready to throw your stone.
+** Do not watch the opponent’s stone until your rock is cleaned and you are in the hack waiting for the skip to call your shot.
+* **Trust your Skip**.  Question the shot calling after the game, not during the game.
+* If the skip is taking a long time to call the shot or asks your preference, then communicate to the skip of course.
+** Be concise and quick with your communication.  This is not the time to deliberate the shot.
+** If communication is a challenge, have a sweeper move closer to the skip to help with communication if absolutely necessary.
+*** Do not wait for the sweeper to get back to throw if you're ready, the rock will come to them.
+* When your team's rock comes to a stop, get out of the way of the next rock to be thrown.
+** Move off to the side of the sheet and walk **single file** back to the delivery hack.
+** If you can, be aware of the opponent's likely call or movement and walk back on the opposite side of the sheet to avoid being in the way.
+*** If you guessed wrong, just keep moving.  The closer you are to the hack, the less likely you are in the way.
+* When its the skip's turn to throw, take the time the skip is using to call the shot and move down the ice to help clean their stone.
+** They may still do a cursory cleaning, but you can help ensure the stone is clean and ready to go.
+
+=== Vices, Skips
+
+* Be thinking about the next shot while your opponent is throwing.
+* The shot is yours to call.  Trust your own judgement.
+** If you need to ask your team for input, do so quickly and decisively.
+* When the vice comes to hold the broom for your shot, use the time of the opponent's stone to discuss the next shot or what the ice is doing.
+** Yes a few shots may be tricky and have tough options. But most shots are pretty straightforward.  Don't overthink it.
+** The skip is still the shot caller, so if you disagree with the skip's call, discuss it after the game.
+
+=== Scoring & Measurements
+
+* Vices should decide the score as soon as possible after the last stone of the end comes to rest.
+* If vices are unsure, do not hesitate to call for a measurement.  Doing so quickly will save time in the long run.
+* If measurement is at the far end of the sheet:
+** A skip (ideally the non-scoring skip if that is known) should grab the measuring device walk it toward to the vice.  Hand it off an go back to the calling end - you do not need to assist in the measurement.
+** The vice of the non-scoring team should return the measuring device by walking up the side of the sheet (opposite side of the oppoenent skip's calling position if possible) so the scoring vice can get in sweeping position quickly.  The skip and lead of the non-scoring team should be ready to throw, so keep the ice clear for them to do so.
+
+=== Watching the clock
+
+* All players should be aware of the time remaining in the game.
+* Each end should take less than 15 minutes to play.
+** **The final 2 ends will often take longer, so earlier ends should be played more quickly to allow for this.**
+* If your game is behind on time, BOTH skips should communicate this to each of their teams and encourage quicker play.
+** **This is not a time for blame or criticism**, but a reminder to *everyone* to be aware of the time and to play quickly.
+
+=== Typical Time to Throw
+
+* Leads, Seconds, and Vices should take 10-15 seconds to throw their stone once their team has control of the ice.
+* Skips typically take 1.5 minutes to throw a stone once they have control of the ice.  Any longer and you are likely slowing down the game.
+* Sweepers, after your team's rock stops, get out of the way and walk back to the hack single file and quickly.
++
+[NOTE]
+Being in the way means the opponent's do not have contol of the ice and slows down the game.
+
+== Other Sources
+
+* https://royalcanadiancurling.com/index.php/curling/speed-of-play-tips
+* https://kwgranite.com/index.php/curling/tips-for-improving-speed-of-play
+* If you find your team is consistently slow, consider talking to a coach, instructor, or fellow curler to help your team improve their overall game, including speed of play.
