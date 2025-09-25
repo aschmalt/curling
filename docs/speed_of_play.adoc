@@ -34,7 +34,7 @@ If a team concedes early, apply the 15 minutes per end rule to extrapolate the n
 For example, if a team concedes after 5 ends and only (or less than) 1 hour & 15 minutes elapsed, the game is extrapolated to 8 ends played in 2 hours and both teams receive +0.25 points.  If more than 1 hour & 15 minutes elapsed, the game is extrapolated to 7 ends played in 2 hours and no additional points are applied.
 
 Most concessions are within 1 end of the bell, so this should generally be able to be resolved without dispute. If teams do not agree on the extrapolated number of ends that would have been played, no additional points will be applied. Teams may review the stream to validate their agreement on the number of ends.
-Teams are not expected to use early concession to accrue (or avoid losing) the modifier
+Teams are not expected to use early concession to accrue the modifier.
 
 === Rationale
 
