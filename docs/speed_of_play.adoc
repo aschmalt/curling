@@ -15,7 +15,7 @@ Each game tied: 1 point
 Each game lost: 0 points
 Proposed Additional Point Modifiers:
 Maintain current point determinations for win/loss record and add an additional modifier accounting for ends-played, rewarding more ends and penalizing fewer ends*
-*Early hand shakes would not be penalized with points unless accompanied by slow play. A full description of addressing early-hand-shakes is below.
+*Early handshakes would not be penalized with points unless accompanied by slow play. A full description of addressing early-hand-shakes is below.
 
 Each game with 8 ends played: +0.25 points
 Each game with 7 ends played: 0 points (no modifier)
