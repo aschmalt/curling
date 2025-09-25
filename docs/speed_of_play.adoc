@@ -87,7 +87,7 @@ The modifier of +/- 0.25 points was chosen to be large enough to have cumulative
 * Vices should decide the score as soon as possible after the last stone of the end comes to rest.
 * If vices are unsure, do not hesitate to call for a measurement.  Doing so quickly will save time in the long run.
 * If measurement is at the far end of the sheet:
-** A skip (ideally the non-scoring skip if that is known) should grab the measuring device and walk it toward to the vice.  Hand it off and go back to the calling end - you do not need to assist in the measurement.
+** A skip (ideally the non-scoring skip if that is known) should grab the measuring device and walk it to the vice.  Hand it off and go back to the calling end - you do not need to assist in the measurement.
 ** The vice of the non-scoring team should return the measuring device by walking up the side of the sheet (opposite side of the opponent skip's calling position if possible) so the scoring vice can get in sweeping position quickly.  The skip and lead of the non-scoring team should be ready to throw, so keep the ice clear for them to do so.
 
 === Watching the clock
