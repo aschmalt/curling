@@ -1,0 +1,75 @@
+= Steps
+:imagesdir: images
+:sectnums:
+
+== Setup Divisions
+
+. Click Tuesday Competitive
++
+image::step_1.png[]
+. Click the Season (Fall - 2nd Half)
++
+image::step_2.png[]
+. Click Pages (Repeat for Pool B)
++
+image::step_3.png[]
+.. Add New Page
+.. Division Page
+.. Add page for Pool A
+
+== Setup Teams
+
+. Click on Pool A
++
+image::step_4.png[]
+. Click Pages (Repeat for all Teams in Pool)
++
+image::step_5.png[]
+.. Add New Page
+.. Team Page
+.. Select an existing Team
+
+== Schedule Upload
+
+=== Team/Division IDs
+
+. Click on HQ
+. Click Competition => Schedule Upload => Team/Division IDs
+. Filter to the desired Season and Subseason
+. Manually map Team Names to Team IDs and Division Names to Division IDs
++
+[NOTE]
+====
+Key is YYDUPT
+
+* YY is always year start (ie 25 for all seaons in 2025-2026 year - including winter and spring leagues)
+* D is day of the week (S for Sunday, M for Monday, T for Tuesday, W for Wednesday, H for Thursday, F for Friday, A for Saturday)
+* U is sub season (F for Fall, W for Winter, S for Spring) For Tuesday I use 1 or 2 for first or second half of the season
+* P is Pool for Tuesday leagues (A for Pool A, B for Pool B)
+* T is Team (ie 1, 2, 3, etc.)
+====
+image::step_6.png[]
+. Click `SAVE TEAM/DIVISION IDS` button
+
+=== Create Upload File
+
+. Change the CSV file created to have the following headers to match SportsEngine's required format:
++
+[%autowidth]
+|===
+| Format | Start_Date | Start_Time | End_Date | End_Time | Location | Team1_ID | Team2_ID | Description | Location_Url | Location_Details | All_Day_Event | Event_Type | Team1_Is_Home
+|===
+. Change the team names to the corresponding Team IDs from the previous step
+. Save the file as a CSV
+
+=== Upload Schedule
+
+. Click on HQ
+. Click Competition => Schedule Upload => Schedule Upload
+. Click `Choose File`
+. Leave Schedule Format as `SportsEngine File Format`
+. Upload the CSV file created in the previous step by clicking `IMPORT SCHEDULE` button
+
+== Resulting Look & Feel
+
+image:standings.png[]
