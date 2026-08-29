@@ -1,0 +1,1693 @@
+= Evergreen Curling Club League Coordinator Guide
+:toc:
+:toclevels: 3
+:sectnums:
+:icons: font
+:imagesdir: images
+
+== Purpose
+
+This document defines the standard Evergreen Curling Club process for creating and managing league sessions within SportsEngine.
+
+The goals of this guide are:
+
+* Ensure all league coordinators use a consistent workflow.
+* Protect historical rosters, schedules, standings, and team records.
+* Provide a repeatable process for creating new seasons.
+* Ensure all registered participants are properly rostered.
+* Establish a standardized schedule upload process.
+* Serve as training material for new league coordinators.
+
+This guide covers:
+
+* Registration verification
+* League configuration
+* Season creation
+* Subseason creation
+* Team creation
+* Team copy considerations
+* Rostering
+* Roster reconciliation
+* Schedule uploads
+* Validation and publishing
+
+== Quick Start Checklist
+
+Before beginning, ensure the following tasks are completed:
+
+* [ ] Registration verified
+* [ ] Registration roster exported
+* [ ] League verified
+* [ ] Season created
+* [ ] Fall subseason created
+* [ ] Teams created
+* [ ] Registrants rostered
+* [ ] Roster audit completed
+* [ ] Schedule uploaded
+* [ ] Schedule validated
+* [ ] Public pages verified
+
+== Evergreen Policy
+
+[IMPORTANT]
+====
+The current registration is the official source of truth for league participants.
+
+League coordinators must roster participants from the current registration.
+
+Do not use prior-year rosters as the source of truth for the current season.
+====
+
+[IMPORTANT]
+====
+Historical teams, rosters, schedules, standings, and game results are considered permanent records.
+
+League setup activities should never modify historical records.
+====
+
+== Safety Rules
+
+[WARNING]
+====
+DO NOT MODIFY HISTORICAL TEAMS.
+
+A team associated with a previous season or subseason is a historical record.
+
+Historical teams may be referenced by:
+
+* Published schedules
+* Team pages
+* Historical standings
+* Historical rosters
+* Public league archives
+
+Editing a historical team may affect previous seasons.
+====
+ 
+[WARNING]
+====
+DO NOT CLEAR THE ROSTER OF A HISTORICAL TEAM.
+
+If you are unsure whether a team belongs to a prior season, stop immediately and verify before making changes.
+====
+
+[WARNING]
+====
+DO NOT USE TEAM COPY AS THE STANDARD WORKFLOW.
+
+Until Evergreen verifies exactly how SportsEngine handles team copying and roster inheritance, the preferred and supported workflow is:
+
+* Create a new season
+* Create a new subseason
+* Create new teams
+* Roster current registrants onto those teams
+
+This approach is the safest and least likely to affect historical records.
+====
+
+[WARNING]
+====
+STOP IMMEDIATELY IF:
+
+* A previous-season roster changes unexpectedly.
+* A copied team appears to update a historical team.
+* Historical schedules disappear.
+* Historical standings change.
+* A schedule upload affects another season.
+
+Contact a SportsEngine administrator before proceeding.
+====
+
+== League Setup Overview
+
+The standard workflow is:
+
+. Verify Registration
+. Create League Season
+. Create Fall Subseason
+. Create Teams
+. Roster Players
+. Perform Roster Reconciliation
+. Prepare Schedule
+. Upload Schedule
+. Validate League
+. Publish
+
+== Step 1: Verify Registration
+
+Navigate to:
+
+----
+Registration
+  -> Registrations
+----
+
+Locate the registration for the league being configured.
+
+Example:
+
+----
+League 06 - Thursday Evening - Fall 2026
+----
+
+.Registration Page
+image::01-registrations.png[Registration Page]
+
+Verify:
+
+* Registration name
+* Registration status
+* Active participant count
+* Waitlist count
+* Session information
+
+Example:
+
+----
+League 06 - Thursday Evening - Fall 2026
+Active Count: 52
+----
+
+=== Export Registration Data
+
+Export the registrant list.
+
+Suggested filename:
+
+----
+league06-fall2026-registration.csv
+----
+
+Retain the export until final roster verification is complete.
+
+=== Registration Verification Checklist
+
+Verify:
+
+* [ ] Correct registration selected
+* [ ] Registration active
+* [ ] Registration count recorded
+* [ ] Registration export saved
+* [ ] Waitlist reviewed
+* [ ] Cancellations reviewed
+
+== Step 2: Verify League
+
+Navigate to:
+
+----
+Competition
+  -> Sport Management
+  -> Leagues
+----
+
+Locate the league.
+
+Example:
+
+----
+Thursday Night
+----
+
+.Leagues Tab
+image::02-leagues.png[Leagues Tab]
+
+Verify:
+
+* League exists
+* League name is correct
+* Gender configuration is correct
+* League colors are configured
+
+If the league does not exist:
+
+. Create a new league.
+. Enter the correct information.
+. Save.
+
+== Step 3: Create a New League Season
+
+Navigate to:
+
+----
+Competition
+  -> Sport Management
+  -> Seasons
+----
+
+Locate the league.
+
+.Seasons Tab
+image::03-seasons.png[Seasons Tab]
+
+Create a new season.
+
+Example:
+
+----
+2026-2027
+----
+
+Verify:
+
+* Season appears under correct league
+* Prior seasons remain unchanged
+
+=== Season Checklist
+
+Verify:
+
+* [ ] New season created
+* [ ] Correct league
+* [ ] Correct year
+* [ ] Historical seasons unchanged
+
+[WARNING]
+====
+Do NOT rename an old season to become the new season.
+
+Always create a new season record.
+====
+
+== Step 4: Create the Fall Subseason
+
+Within the new season:
+
+. Create a new subseason.
+. Name it:
+
+----
+Fall
+----
+
+Example hierarchy:
+
+----
+Thursday Night
+  -> 2026-2027
+       -> Fall
+----
+
+Verify:
+
+* Correct league
+* Correct season
+* Correct subseason
+
+=== Subseason Checklist
+
+* [ ] Fall subseason created
+* [ ] Associated with correct season
+* [ ] Associated with correct league
+
+== Step 5: Divisions (Tuesday Competitive Only)
+
+NOTE: Most Evergreen leagues do not use divisions.
+
+This section primarily applies to Tuesday Competitive.
+
+Navigate to:
+
+----
+Competition
+  -> Sport Management
+  -> Divisions
+----
+
+.Divisions Tab
+image::04-divisions.png[Divisions]
+
+Examples:
+
+----
+Pool A
+Pool B
+----
+
+Verify:
+
+* Division names correct
+* Associated with correct league
+
+If no divisions are required, skip this step.
+
+== Step 6: Create Teams
+
+=== Standard Evergreen Method
+
+The preferred Evergreen workflow is to create NEW teams every season.
+
+Navigate to:
+
+----
+Competition
+  -> Sport Management
+  -> Teams
+----
+
+Select:
+
+* League
+* Season
+* Subseason
+
+.Teams Tab
+image::05-teams.png[Teams Tab]
+
+Example:
+
+----
+League: Thursday Night
+Season: 2026-2027
+Subseason: Fall
+----
+
+=== Create Team
+
+For each team:
+
+. Click Add Team.
+. Enter Team Name.
+. Enter Short Name.
+. Enter Abbreviation.
+. Verify League.
+. Verify Season.
+. Verify Subseason.
+. Save.
+
+Repeat for all teams.
+
+=== Team Creation Verification
+
+After creating each team verify:
+
+* Team belongs to Fall 2026.
+* Team belongs to 2026-2027.
+* Team belongs to correct league.
+* Team roster count is zero.
+* Team is not associated with previous seasons.
+
+=== Team Naming Best Practices
+
+Use actual team names whenever possible.
+
+Examples:
+
+----
+Schmaltz
+Tomlinson
+Lilyhammer
+Plaid
+----
+
+Avoid:
+
+----
+Team1
+Team2
+Team3
+----
+
+unless official team names are not yet known.
+
+== Team Copy Procedure (Optional)
+
+[WARNING]
+====
+Team copy is OPTIONAL and not recommended until SportsEngine behavior has been verified.
+====
+
+Before using team copy:
+
+Verify all of the following:
+
+* Copy creates a new Team ID.
+* Historical team remains unchanged.
+* Historical roster remains unchanged.
+* Historical standings remain unchanged.
+* Historical schedule remains unchanged.
+
+=== Team Copy Validation Process
+
+Test only one team.
+
+. Copy one team.
+. Open copied team.
+. Confirm unique Team ID.
+. Confirm historical team remains unchanged.
+. Determine roster behavior.
+
+If old players are copied:
+
+. Verify copied team is independent.
+. Remove inherited players ONLY from copied team.
+. Verify historical roster remains unchanged.
+
+If historical roster changes:
+
+STOP IMMEDIATELY.
+
+Use newly created teams instead.
+
+== Step 7: Roster Players
+
+Navigate to:
+
+----
+Competition
+  -> Rostering
+----
+
+Select:
+
+----
+Assign Players
+----
+
+.Rostering Page
+image::06-rostering.png[Rostering Page]
+
+=== Select Registration Source
+
+Choose:
+
+----
+Select a List of People
+----
+
+Select:
+
+----
+League 06 - Thursday Evening - Fall 2026
+----
+
+Only roster from the current registration.
+
+=== Filter Teams
+
+Filter by:
+
+* League
+* Season
+* Subseason
+
+Verify you are viewing:
+
+----
+2026-2027
+Fall
+----
+
+before assigning players.
+
+=== Assign Players
+
+Assign registrants to teams.
+
+Verify:
+
+* Every participant assigned once.
+* No duplicates.
+* No inactive participants.
+* No cancelled participants.
+* No waitlisted participants.
+
+=== Team Verification
+
+After rostering:
+
+Verify:
+
+* Skip assigned correctly
+* Vice assigned correctly
+* Correct team membership
+* Expected roster size
+
+== Step 8: Registration-to-Roster Reconciliation
+
+Matching counts are NOT sufficient.
+
+Example:
+
+----
+52 Registrants
+52 Player Slots Filled
+----
+
+This does not guarantee correctness.
+
+One player may have been assigned twice while another is missing.
+
+=== Required Validation
+
+Verify:
+
+----
+Active Registrants            52
+Rostered Participants         52
+Unassigned Participants        0
+Duplicate Assignments          0
+----
+
+Replace 52 with actual registration count.
+
+=== Name-by-Name Verification
+
+Compare registration export against rosters.
+
+Verify:
+
+* No missing participants.
+* No duplicate participants.
+* No inactive participants.
+* No waitlisted participants.
+* No participants from a previous year.
+
+=== Team Audit
+
+For every team verify:
+
+* Team size correct
+* Team members correct
+* Skip correct
+* Vice correct
+
+=== Save Final Audit
+
+Suggested filename:
+
+----
+league06-fall2026-roster-audit.xlsx
+----
+
+== Step 9: Download Schedule Template
+
+Navigate to:
+
+----
+Competition
+  -> Schedule Upload
+----
+
+.Schedule Upload
+image::07-schedule-upload.png[Schedule Upload]
+
+Download:
+
+----
+Schedule Upload Template
+----
+
+[IMPORTANT]
+====
+Always download a fresh template from SportsEngine.
+
+Do not assume the previous year's template is still valid.
+====
+
+== Step 10: Obtain Team IDs and Division IDs
+
+Navigate to:
+
+----
+Competition
+  -> Schedule Upload
+  -> Team/Division IDs
+----
+
+.Team and Division IDs
+image::08-team-division-ids.png[Team and Division IDs]
+
+Record:
+
+* Team IDs
+* Division IDs (if applicable)
+
+Verify all IDs belong to:
+
+----
+2026-2027
+Fall
+----
+
+and not a historical season.
+
+== Step 11: Build Schedule File
+
+Populate the template with:
+
+* Team IDs
+* Game dates
+* Start times
+* Sheet assignments
+* Matchups
+
+Verify:
+
+* Valid teams
+* Valid IDs
+* Correct dates
+* Correct times
+* Correct sheet numbers
+
+=== Schedule Validation
+
+Verify:
+
+* No missing games
+* No duplicate games
+* Correct number of games
+* Valid team references
+
+== Step 12: Import Schedule
+
+Navigate to:
+
+----
+Competition
+  -> Schedule Upload
+----
+
+Upload schedule file.
+
+Select:
+
+----
+SportsEngine File Format
+----
+
+=== Initial Import Settings
+
+Recommended settings:
+
+* Enable Commenting on Games = Yes
+* Replace All Previously Uploaded Events = No
+
+[WARNING]
+====
+Do NOT check "Replace All Previously Uploaded Events" during the first upload.
+
+Validate the schedule first.
+
+Use replacement only when you understand exactly what events will be affected.
+====
+
+=== Verify Import Results
+
+Check:
+
+* All games imported
+* No duplicate games
+* Dates correct
+* Times correct
+* Sheets correct
+* Teams correct
+
+== Step 13: Publish
+
+Publish schedule according to Evergreen procedures.
+
+Verify:
+
+* Teams visible
+* Schedule visible
+* Team pages function properly
+
+== Step 14: Public Validation
+
+Review the public site.
+
+Verify:
+
+* Schedule appears correctly
+* Teams appear correctly
+* Rosters appear correctly
+* Historical seasons still appear correctly
+
+=== Historical Verification
+
+Confirm:
+
+* Previous rosters still exist
+* Previous schedules still exist
+* Previous standings still exist
+
+== Common Problems
+
+=== Registrant Missing From Rostering
+
+Verify:
+
+* Correct registration selected
+* Participant active
+* Participant not cancelled
+* Participant not waitlisted
+
+=== Duplicate Team
+
+Verify:
+
+* League
+* Season
+* Subseason
+
+Delete only after confirming no roster and no schedule references exist.
+
+=== Historical Roster Changed
+
+STOP IMMEDIATELY.
+
+Contact a SportsEngine administrator.
+
+Do not continue modifying teams.
+
+=== Schedule Imported Incorrectly
+
+Do not immediately import over the top.
+
+Instead:
+
+. Fix source file.
+. Verify Team IDs.
+. Revalidate schedule.
+. Reimport only after determining impact.
+
+== Final Coordinator Sign-Off
+
+=== Registration
+
+* [ ] Correct registration selected
+* [ ] Registration exported
+* [ ] Active count verified
+
+=== Season
+
+* [ ] Season created
+* [ ] Fall subseason created
+
+=== Teams
+
+* [ ] Teams created
+* [ ] No historical teams modified
+
+=== Rostering
+
+* [ ] All registrants assigned
+* [ ] No duplicates
+* [ ] No missing participants
+* [ ] Team audit completed
+
+=== Schedule
+
+* [ ] Template downloaded
+* [ ] Team IDs verified
+* [ ] Schedule validated
+* [ ] Schedule uploaded successfully
+
+=== Publication
+
+* [ ] Schedule published
+* [ ] Public page verified
+* [ ] Historical records verified
+
+== Image Files
+
+Store screenshots in:
+
+----
+images/
+├── 01-registrations.png
+├── 02-leagues.png
+├── 03-seasons.png
+├── 04-divisions.png
+├── 05-teams.png
+├── 06-rostering.png
+├── 07-schedule-upload.png
+└── 08-team-division-ids.png
+----
+
+Because this document defines:
+
+----
+:imagesdir: images
+----
+
+the screenshots will automatically be included when rendered.
+
+== Revision History
+
+[cols="1,2,4"]
+|===
+|Version |Date |Description
+
+|1.0
+|2026-08-29
+|Initial Evergreen Curling Club League Coordinator Guide
+
+|==== Evergreen Curling Club League Coordinator Guide
+:toc:
+:toclevels: 3
+:sectnums:
+:icons: font
+:imagesdir: images
+
+== Purpose
+
+This document defines the standard Evergreen Curling Club process for creating and managing league sessions within SportsEngine.
+
+The goals of this guide are:
+
+* Ensure all league coordinators use a consistent workflow.
+* Protect historical rosters, schedules, standings, and team records.
+* Provide a repeatable process for creating new seasons.
+* Ensure all registered participants are properly rostered.
+* Establish a standardized schedule upload process.
+* Serve as training material for new league coordinators.
+
+This guide covers:
+
+* Registration verification
+* League configuration
+* Season creation
+* Subseason creation
+* Team creation
+* Team copy considerations
+* Rostering
+* Roster reconciliation
+* Schedule uploads
+* Validation and publishing
+
+== Quick Start Checklist
+
+Before beginning, ensure the following tasks are completed:
+
+* [ ] Registration verified
+* [ ] Registration roster exported
+* [ ] League verified
+* [ ] Season created
+* [ ] Fall subseason created
+* [ ] Teams created
+* [ ] Registrants rostered
+* [ ] Roster audit completed
+* [ ] Schedule uploaded
+* [ ] Schedule validated
+* [ ] Public pages verified
+
+== Evergreen Policy
+
+[IMPORTANT]
+====
+The current registration is the official source of truth for league participants.
+
+League coordinators must roster participants from the current registration.
+
+Do not use prior-year rosters as the source of truth for the current season.
+====
+
+[IMPORTANT]
+====
+Historical teams, rosters, schedules, standings, and game results are considered permanent records.
+
+League setup activities should never modify historical records.
+====
+
+== Safety Rules
+
+[WARNING]
+====
+DO NOT MODIFY HISTORICAL TEAMS.
+
+A team associated with a previous season or subseason is a historical record.
+
+Historical teams may be referenced by:
+
+* Published schedules
+* Team pages
+* Historical standings
+* Historical rosters
+* Public league archives
+
+Editing a historical team may affect previous seasons.
+====
+ 
+[WARNING]
+====
+DO NOT CLEAR THE ROSTER OF A HISTORICAL TEAM.
+
+If you are unsure whether a team belongs to a prior season, stop immediately and verify before making changes.
+====
+
+[WARNING]
+====
+DO NOT USE TEAM COPY AS THE STANDARD WORKFLOW.
+
+Until Evergreen verifies exactly how SportsEngine handles team copying and roster inheritance, the preferred and supported workflow is:
+
+* Create a new season
+* Create a new subseason
+* Create new teams
+* Roster current registrants onto those teams
+
+This approach is the safest and least likely to affect historical records.
+====
+
+[WARNING]
+====
+STOP IMMEDIATELY IF:
+
+* A previous-season roster changes unexpectedly.
+* A copied team appears to update a historical team.
+* Historical schedules disappear.
+* Historical standings change.
+* A schedule upload affects another season.
+
+Contact a SportsEngine administrator before proceeding.
+====
+
+== League Setup Overview
+
+The standard workflow is:
+
+. Verify Registration
+. Create League Season
+. Create Fall Subseason
+. Create Teams
+. Roster Players
+. Perform Roster Reconciliation
+. Prepare Schedule
+. Upload Schedule
+. Validate League
+. Publish
+
+== Step 1: Verify Registration
+
+Navigate to:
+
+----
+Registration
+  -> Registrations
+----
+
+Locate the registration for the league being configured.
+
+Example:
+
+----
+League 06 - Thursday Evening - Fall 2026
+----
+
+.Registration Page
+image::01-registrations.png[Registration Page]
+
+Verify:
+
+* Registration name
+* Registration status
+* Active participant count
+* Waitlist count
+* Session information
+
+Example:
+
+----
+League 06 - Thursday Evening - Fall 2026
+Active Count: 52
+----
+
+=== Export Registration Data
+
+Export the registrant list.
+
+Suggested filename:
+
+----
+league06-fall2026-registration.csv
+----
+
+Retain the export until final roster verification is complete.
+
+=== Registration Verification Checklist
+
+Verify:
+
+* [ ] Correct registration selected
+* [ ] Registration active
+* [ ] Registration count recorded
+* [ ] Registration export saved
+* [ ] Waitlist reviewed
+* [ ] Cancellations reviewed
+
+== Step 2: Verify League
+
+Navigate to:
+
+----
+Competition
+  -> Sport Management
+  -> Leagues
+----
+
+Locate the league.
+
+Example:
+
+----
+Thursday Night
+----
+
+.Leagues Tab
+image::02-leagues.png[Leagues Tab]
+
+Verify:
+
+* League exists
+* League name is correct
+* Gender configuration is correct
+* League colors are configured
+
+If the league does not exist:
+
+. Create a new league.
+. Enter the correct information.
+. Save.
+
+== Step 3: Create a New League Season
+
+Navigate to:
+
+----
+Competition
+  -> Sport Management
+  -> Seasons
+----
+
+Locate the league.
+
+.Seasons Tab
+image::03-seasons.png[Seasons Tab]
+
+Create a new season.
+
+Example:
+
+----
+2026-2027
+----
+
+Verify:
+
+* Season appears under correct league
+* Prior seasons remain unchanged
+
+=== Season Checklist
+
+Verify:
+
+* [ ] New season created
+* [ ] Correct league
+* [ ] Correct year
+* [ ] Historical seasons unchanged
+
+[WARNING]
+====
+Do NOT rename an old season to become the new season.
+
+Always create a new season record.
+====
+
+== Step 4: Create the Fall Subseason
+
+Within the new season:
+
+. Create a new subseason.
+. Name it:
+
+----
+Fall
+----
+
+Example hierarchy:
+
+----
+Thursday Night
+  -> 2026-2027
+       -> Fall
+----
+
+Verify:
+
+* Correct league
+* Correct season
+* Correct subseason
+
+=== Subseason Checklist
+
+* [ ] Fall subseason created
+* [ ] Associated with correct season
+* [ ] Associated with correct league
+
+== Step 5: Divisions (Tuesday Competitive Only)
+
+NOTE: Most Evergreen leagues do not use divisions.
+
+This section primarily applies to Tuesday Competitive.
+
+Navigate to:
+
+----
+Competition
+  -> Sport Management
+  -> Divisions
+----
+
+.Divisions Tab
+image::04-divisions.png[Divisions]
+
+Examples:
+
+----
+Pool A
+Pool B
+----
+
+Verify:
+
+* Division names correct
+* Associated with correct league
+
+If no divisions are required, skip this step.
+
+== Step 6: Create Teams
+
+=== Standard Evergreen Method
+
+The preferred Evergreen workflow is to create NEW teams every season.
+
+Navigate to:
+
+----
+Competition
+  -> Sport Management
+  -> Teams
+----
+
+Select:
+
+* League
+* Season
+* Subseason
+
+.Teams Tab
+image::05-teams.png[Teams Tab]
+
+Example:
+
+----
+League: Thursday Night
+Season: 2026-2027
+Subseason: Fall
+----
+
+=== Create Team
+
+For each team:
+
+. Click Add Team.
+. Enter Team Name.
+. Enter Short Name.
+. Enter Abbreviation.
+. Verify League.
+. Verify Season.
+. Verify Subseason.
+. Save.
+
+Repeat for all teams.
+
+=== Team Creation Verification
+
+After creating each team verify:
+
+* Team belongs to Fall 2026.
+* Team belongs to 2026-2027.
+* Team belongs to correct league.
+* Team roster count is zero.
+* Team is not associated with previous seasons.
+
+=== Team Naming Best Practices
+
+Use actual team names whenever possible.
+
+Examples:
+
+----
+Schmaltz
+Tomlinson
+Lilyhammer
+Plaid
+----
+
+Avoid:
+
+----
+Team1
+Team2
+Team3
+----
+
+unless official team names are not yet known.
+
+== Team Copy Procedure (Optional)
+
+[WARNING]
+====
+Team copy is OPTIONAL and not recommended until SportsEngine behavior has been verified.
+====
+
+Before using team copy:
+
+Verify all of the following:
+
+* Copy creates a new Team ID.
+* Historical team remains unchanged.
+* Historical roster remains unchanged.
+* Historical standings remain unchanged.
+* Historical schedule remains unchanged.
+
+=== Team Copy Validation Process
+
+Test only one team.
+
+. Copy one team.
+. Open copied team.
+. Confirm unique Team ID.
+. Confirm historical team remains unchanged.
+. Determine roster behavior.
+
+If old players are copied:
+
+. Verify copied team is independent.
+. Remove inherited players ONLY from copied team.
+. Verify historical roster remains unchanged.
+
+If historical roster changes:
+
+STOP IMMEDIATELY.
+
+Use newly created teams instead.
+
+== Step 7: Roster Players
+
+Navigate to:
+
+----
+Competition
+  -> Rostering
+----
+
+Select:
+
+----
+Assign Players
+----
+
+.Rostering Page
+image::06-rostering.png[Rostering Page]
+
+=== Select Registration Source
+
+Choose:
+
+----
+Select a List of People
+----
+
+Select:
+
+----
+League 06 - Thursday Evening - Fall 2026
+----
+
+Only roster from the current registration.
+
+=== Filter Teams
+
+Filter by:
+
+* League
+* Season
+* Subseason
+
+Verify you are viewing:
+
+----
+2026-2027
+Fall
+----
+
+before assigning players.
+
+=== Assign Players
+
+Assign registrants to teams.
+
+Verify:
+
+* Every participant assigned once.
+* No duplicates.
+* No inactive participants.
+* No cancelled participants.
+* No waitlisted participants.
+
+=== Team Verification
+
+After rostering:
+
+Verify:
+
+* Skip assigned correctly
+* Vice assigned correctly
+* Correct team membership
+* Expected roster size
+
+== Step 8: Registration-to-Roster Reconciliation
+
+Matching counts are NOT sufficient.
+
+Example:
+
+----
+52 Registrants
+52 Player Slots Filled
+----
+
+This does not guarantee correctness.
+
+One player may have been assigned twice while another is missing.
+
+=== Required Validation
+
+Verify:
+
+----
+Active Registrants            52
+Rostered Participants         52
+Unassigned Participants        0
+Duplicate Assignments          0
+----
+
+Replace 52 with actual registration count.
+
+=== Name-by-Name Verification
+
+Compare registration export against rosters.
+
+Verify:
+
+* No missing participants.
+* No duplicate participants.
+* No inactive participants.
+* No waitlisted participants.
+* No participants from a previous year.
+
+=== Team Audit
+
+For every team verify:
+
+* Team size correct
+* Team members correct
+* Skip correct
+* Vice correct
+
+=== Save Final Audit
+
+Suggested filename:
+
+----
+league06-fall2026-roster-audit.xlsx
+----
+
+== Step 9: Download Schedule Template
+
+Navigate to:
+
+----
+Competition
+  -> Schedule Upload
+----
+
+.Schedule Upload
+image::07-schedule-upload.png[Schedule Upload]
+
+Download:
+
+----
+Schedule Upload Template
+----
+
+[IMPORTANT]
+====
+Always download a fresh template from SportsEngine.
+
+Do not assume the previous year's template is still valid.
+====
+
+== Step 10: Obtain Team IDs and Division IDs
+
+Navigate to:
+
+----
+Competition
+  -> Schedule Upload
+  -> Team/Division IDs
+----
+
+.Team and Division IDs
+image::08-team-division-ids.png[Team and Division IDs]
+
+Record:
+
+* Team IDs
+* Division IDs (if applicable)
+
+Verify all IDs belong to:
+
+----
+2026-2027
+Fall
+----
+
+and not a historical season.
+
+== Step 11: Build Schedule File
+
+Populate the template with:
+
+* Team IDs
+* Game dates
+* Start times
+* Sheet assignments
+* Matchups
+
+Verify:
+
+* Valid teams
+* Valid IDs
+* Correct dates
+* Correct times
+* Correct sheet numbers
+
+=== Schedule Validation
+
+Verify:
+
+* No missing games
+* No duplicate games
+* Correct number of games
+* Valid team references
+
+== Step 12: Import Schedule
+
+Navigate to:
+
+----
+Competition
+  -> Schedule Upload
+----
+
+Upload schedule file.
+
+Select:
+
+----
+SportsEngine File Format
+----
+
+=== Initial Import Settings
+
+Recommended settings:
+
+* Enable Commenting on Games = Yes
+* Replace All Previously Uploaded Events = No
+
+[WARNING]
+====
+Do NOT check "Replace All Previously Uploaded Events" during the first upload.
+
+Validate the schedule first.
+
+Use replacement only when you understand exactly what events will be affected.
+====
+
+=== Verify Import Results
+
+Check:
+
+* All games imported
+* No duplicate games
+* Dates correct
+* Times correct
+* Sheets correct
+* Teams correct
+
+== Step 13: Publish
+
+Publish schedule according to Evergreen procedures.
+
+Verify:
+
+* Teams visible
+* Schedule visible
+* Team pages function properly
+
+== Step 14: Public Validation
+
+Review the public site.
+
+Verify:
+
+* Schedule appears correctly
+* Teams appear correctly
+* Rosters appear correctly
+* Historical seasons still appear correctly
+
+=== Historical Verification
+
+Confirm:
+
+* Previous rosters still exist
+* Previous schedules still exist
+* Previous standings still exist
+
+== Common Problems
+
+=== Registrant Missing From Rostering
+
+Verify:
+
+* Correct registration selected
+* Participant active
+* Participant not cancelled
+* Participant not waitlisted
+
+=== Duplicate Team
+
+Verify:
+
+* League
+* Season
+* Subseason
+
+Delete only after confirming no roster and no schedule references exist.
+
+=== Historical Roster Changed
+
+STOP IMMEDIATELY.
+
+Contact a SportsEngine administrator.
+
+Do not continue modifying teams.
+
+=== Schedule Imported Incorrectly
+
+Do not immediately import over the top.
+
+Instead:
+
+. Fix source file.
+. Verify Team IDs.
+. Revalidate schedule.
+. Reimport only after determining impact.
+
+== Final Coordinator Sign-Off
+
+=== Registration
+
+* [ ] Correct registration selected
+* [ ] Registration exported
+* [ ] Active count verified
+
+=== Season
+
+* [ ] Season created
+* [ ] Fall subseason created
+
+=== Teams
+
+* [ ] Teams created
+* [ ] No historical teams modified
+
+=== Rostering
+
+* [ ] All registrants assigned
+* [ ] No duplicates
+* [ ] No missing participants
+* [ ] Team audit completed
+
+=== Schedule
+
+* [ ] Template downloaded
+* [ ] Team IDs verified
+* [ ] Schedule validated
+* [ ] Schedule uploaded successfully
+
+=== Publication
+
+* [ ] Schedule published
+* [ ] Public page verified
+* [ ] Historical records verified
+
+== Image Files
+
+Store screenshots in:
+
+----
+images/
+├── 01-registrations.png
+├── 02-leagues.png
+├── 03-seasons.png
+├── 04-divisions.png
+├── 05-teams.png
+├── 06-rostering.png
+├── 07-schedule-upload.png
+└── 08-team-division-ids.png
+----
+
+Because this document defines:
+
+----
+:imagesdir: images
+----
+
+the screenshots will automatically be included when rendered.
+
+== Revision History
+
+[cols="1,2,4"]
+|===
+|Version |Date |Description
+
+|1.0
+|2026-08-29
+|Initial Evergreen Curling Club League Coordinator Guide
+
+|===
