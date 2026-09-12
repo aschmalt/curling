@@ -214,7 +214,7 @@ For each team:
 . Short Name: Enter Short Name.
 * This is what will be shown on the banner in the Evergreen League Page
 image::team_banner.png[Team Banner]
-. Abbreviation: Enter Abbreviation.
+. [[team_abbreviation]]Abbreviation: Enter Abbreviation.
 * This is useful for game scheduling.  Recommendation is to keep it 6 characters:
 ** 2 for the year
 ** 1 for the league weekday (M, T, W, H, F, S, U)
@@ -300,6 +300,10 @@ image:rostering_11.png[Remove Player]
 
 == [[schedule]]Scheduling
 
+First thing when scheduling is to <<assign_teamids, assign Team IDs>> to a particular Season.  The games will be created between 2 team IDs, so that is how the system associates the games with the season.
+
+This associates the games
+
 Navigate to:
 
 ----
@@ -308,72 +312,149 @@ Competition
 ----
 
 .Schedule Upload
-image::07-schedule-upload.png[Schedule Upload]
+image::schedule_upload_1.png[Schedule Upload]
 
-=== Assign Team IDs and Division IDs
+=== [[assign_teamids]]Assign Team/Division IDs
 
-Navigate to:
+. Navigate to the `Assign Team/Division IDs` tab.
+image::schedule_upload_2.png[]
+. Select the League, Season, and Subseason for which you are assigning Team IDs.
+* Recommend using the same team ID style as the <<team_abbreviation, team abbreviation>>, e.g. `26HF01` for 2026 Thursday Fall Team 1.
+* For the League ID, use the common portion of the team ID, e.g. `26HF` for 2026 Thursday Fall.
+** It is unclear what SportsEngine does with the League ID.
 
-----
-Competition
-  -> Schedule Upload
-  -> Team/Division IDs
-----
-
++
+[NOTE]
+====
+Remember these are the IDs that will be used in the schedule upload file and must be unique to the league, season, and sub-season.
+====
+image::schedule_upload_3.png[]
+. Click `SAVE TEAM/DIVISION IDS` to save the Team IDs.
+image::schedule_upload_4.png[]
+. The screen won't really change, but there is a message at the top of the screen indicating the Team IDs were saved.
+image::schedule_upload_5.png[]
 
 === [[create-schedule]]Build Schedule File
 
+SportsEngine uses a CSV file to upload the schedule.  The CSV file can be created in Excel or Google Sheets, but must follow the template.
+
 ==== Download Schedule Template
 
-Download:
+You can download the SE Template from SportsEngine, but it has a lot of extra information that is not needed for Evergreen Curling Club leagues.  The link:schedule_template.csv[Schedule Template here] is a simplified version of the SE template and recommended for use by league coordinators.
 
-----
-Schedule Upload Template
-----
+Below is a what each column in the template is used for and what data should be entered.
+
+Format::
+* Tells SportsEngine what import format this CSV is using.
+* Value/format: `SportsEngine`
+* RECOMMENDATION: Do not change this value.
+
+Start_Date::
+* The date the game starts.
+* Value/format: `MM/DD/YYYY`, for example `09/24/2026`
+
+Start_Time::
+* The start time of the game.
+* Value/format: `HH:MM:SS` in 24-hour time, for example `18:00:00`
+
+End_Date::
+* The date the game ends. For a single game, this is usually the same as the start date.
+* Value/format: `MM/DD/YYYY`, for example `09/24/2026`
+
+End_Time::
+* The end time of the game.
+* Value/format: `HH:MM:SS` in 24-hour time, for example `20:00:00`
+
+Location::
+* The sheet name where the game is played.
+* Value/format: sheet name, for example `Sheet A`
+
+Team1_ID::
+* The team ID for the first team in the matchup.
+* Value/format: assigned team ID, for example `26HF04`
+
+Team2_ID::
+* The team ID for the second team in the matchup.
+* Value/format: assigned team ID, for example `26HF08`
+
+Description::
+* Optional text describing the event or notes for the game.
+* Required by SportsEngine for importing, so it cannot be removed from the csv.
+* RECOMMENDATION: Leave blank as this is not used by Evergreen Curling Club leagues.
+
+Location_Url::
+* Optional URL for the playing location or venue.
+* Required by SportsEngine for importing, so it cannot be removed from the csv.
+* RECOMMENDATION: Leave blank as this is not used by Evergreen Curling Club leagues.
+
+Location_Details::
+* Optional notes about the venue or location.
+* Required by SportsEngine for importing, so it cannot be removed from the csv.
+* RECOMMENDATION: Leave blank as this is not used by Evergreen Curling Club leagues.
+
+All_Day_Event::
+* Marks whether this event is an all-day event.
+* Required by SportsEngine for importing, so it cannot be removed from the csv.
+* RECOMENDATION: Use '0' for all Evergreen Curling Club leagues as they are not all-day events.
+
+Event_Type::
+* Identifies the type of event being imported.
+* Value/format: `Game`
+* RECOMENDATION: Always use `Game` for Evergreen Curling Club leagues.
+
+Tags::
+* Optional tags assigned to the event.
+* Required by SportsEngine for importing, so it cannot be removed from the csv.
+* RECOMMENDATION: Leave blank as this is not used by Evergreen Curling Club leagues.
+
+Team1_Is_Home::
+* Indicates whether Team1 is the home team.
+* Value/format: `1` for home, `0` for away
+* RECOMENDATION: Always make Team1 the home team for Evergreen Curling Club leagues as it doesn't matter which team is home or away.
+
+Team2_Name::
+* This field is not normally used for a standard league schedule import, but required by SportsEngine.
+* Required by SportsEngine for importing, so it cannot be removed from the csv.
+* RECOMMENDATION: Use `0` for all Evergreen Curling Club leagues as they are not used.
+
+Custom_Opponent::
+* Indicates whether the matchup is a custom opponent entry instead of a regular league game.
+* Required by SportsEngine for importing, so it cannot be removed from the csv.
+* RECOMMENDATION: Use `FALSE` for league games
+
+==== [[populate-schedule]]Populate Schedule Template
 
 Populate the template with:
 
-* Team IDs
 * Game dates
 * Start times
+* Team IDs
 * Sheet assignments
-* Matchups
-
-Verify:
-
-* Valid teams
-* Valid IDs
-* Correct dates
-* Correct times
-* Correct sheet numbers
 
 === [[import-schedule]]Import Schedule
 
-Navigate to:
+. Navigate to the `Import Schedule` tab.
+image::schedule_upload_6.png[]
+. Click `Choose File` to select the schedule csv file you created.
+* Make sure the `Schedule Format` is set to `SportsEngine File Format`.
+* OPTIONAL: You can leave the `Enable commenting on games` checked if you want to allow comments on the games.
+** This has no real impact either way.
+* Ensure `Replace all previously uploaded events` is *unchecked*
 
-----
-Competition
-  -> Schedule Upload
-----
++
+image::schedule_upload_7.png[]
+. Click `IMPORT SCHEDULE` to import the schedule.
+. A progress bar will appear
+image::schedule_upload_8.png[]
+. Upon completion, a summary of the import will be displayed.
+* This should show that all games were imported successfully.
+* If there are any errors, you will need to fix the csv and re-import the schedule.
+** See <<fixing_imported_schedule, Fixing an Imported Schedule>> section for more information.
 
-Upload schedule file.
-
-Select:
-
-----
-SportsEngine File Format
-----
-
-=== Verify Import Results
-
-Check:
-
-* All games imported
-* No duplicate games
-* Dates correct
-* Times correct
-* Sheets correct
-* Teams correct
++
+image::schedule_upload_9.png[]
+. Verify the schedule looks correct on the Evergreen League Page for the season and subseason intended
+image::schedule_upload_10.png[]
 
 === Common Problems
 
