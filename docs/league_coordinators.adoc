@@ -1,6 +1,6 @@
 = Evergreen Curling Club League Coordinator Guide
 :toc:
-:toclevels: 1
+:toclevels: 2
 :sectnums:
 :icons: font
 :imagesdir: images
@@ -122,34 +122,53 @@ Competition
   -> Seasons
 ----
 
+=== New Season Steps
 .Seasons Tab
 image::se_seasons_tab.png[Seasons Tab]
 
-. Locate the existing league.
-. Create a new season.
-. Season Name: Enter the year range for the season, e.g. `2026-2027`.
-. Subseaon Name: Enter the subseason name, e.g. `Fall`, `Winter`, `Spring`.
-. Statistic Grouping: Leave as `Reguar Season`.
-. Custom Points: Here you can enter the points for a win, loss, tie, etc.
-. Standings View: This is where you can select how the standings are displayed, e.g. `Points`, `Wins`, `Losses`, etc.
+[NOTE]
+Additional Step images can seen below in the <<new-season-images, New Season Images>> section.
+
+. Create a new season by clicking the small new season button in the upper right corner of the Seasons tab (see image above).
+. <<ns_steps_2_3_4_5, Club/League>>: From the dropdown, select the league for which you are creating a new season.
+* If you do not see the league in the dropdown, contact the mailto:leagues@evergreencurling.com[Evergreen Leagues Coordinator] to have the league created.
+. <<ns_steps_2_3_4_5, Season Name>>: Enter the year range for the season, e.g. `2026-2027`.
+. <<ns_steps_2_3_4_5, Subseason Name>>: Enter the subseason name, e.g. `Fall`, `Winter`, `Spring`.
+. <<ns_steps_2_3_4_5, Statistic Grouping>>: Leave as `Regular Season`.
+. <<ns_step_6, Custom Points>>: Here you can enter the points for a win, loss, tie, etc.
+. <<ns_step_7, Standings View>>: This is where you can select how the standings are displayed, e.g. `Points`, `Wins`, `Losses`, etc.
 * Recommend to use `Points`, `Wins`, `Losses`, `Ties`, `Games Remaining` (or `Games Played`).
 * Tuesday Competitive leagues may want to use `Points`, `Wins`, `Losses`, `Overtime Wins`, `Overtime Losses`, `Games Remaining`.
-. Standings Order: Leave as `Default`.
-. Data Source: Select `Start from scratch` to create a new season with no historical data.
+. <<ns_step_8, Standings Order>>: Leave as `Default`.
+. <<ns_step_9, Data Source>>: Select `Start from scratch` to create a new season with no historical data.
 * Using `From League import` or `Copy subseason` will make rostering the teams harder and can affect the historical data for past seasons of the league if rosters are changed.
-. Enable Qualifiers: Leave unchecked.
-. Generate Game ID's: Leave as `None`.
+. <<ns_step_10, Enable Qualifiers>>: Leave unchecked.
+. <<ns_step_10, Generate Game ID's>>: Leave as `None`.
+. <<ns_step_10, Create Season>>: Press the `Create Season` button to create the new season.
+
 
 === [[new-season-images]]New Season Images
+==== [[ns_steps_2_3_4_5]]Steps 2, 3, 4, 5
+.Steps 2, 3, 4, 5
 image::new_season_1.png[]
+
+==== [[ns_step_6]]Step 6
 image::new_season_2.png[]
 image::new_season_3.png[]
+
+==== [[ns_step_7]]Step 7
 image::new_season_4.png[]
 image::new_season_5.png[]
 image::new_season_6.png[]
 image::new_season_7.png[]
+
+==== [[ns_step_8]]Step 8
 image::new_season_8.png[]
+
+==== [[ns_step_9]]Step 9
 image::new_season_9.png[]
+
+==== [[ns_step_10]]Step 10, 11, 12
 image::new_season_10.png[]
 
 == [[teams]]Create Teams
@@ -182,7 +201,7 @@ Subseason: Fall
 image::new_team_1.png[Teams Tab]
 
 
-=== Create Team
+=== Create Team Steps
 
 For each team:
 
@@ -222,7 +241,7 @@ Repeat for all teams.
 You can create placeholders teams and rename the teams later.
 ====
 
-=== Images for Team Creation
+=== Create Team Images
 image::new_team_2.png[]
 image::new_team_3.png[]
 image::new_team_4.png[]
