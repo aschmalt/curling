@@ -460,23 +460,33 @@ image::schedule_upload_10.png[]
 
 === Common Problems
 
-=== Schedule Imported Incorrectly
-
-* Use the override option carefully.
-* If you support multiple leagues, this button can delete unintended games from unaffected seasons.
-
-* Best known practice is to export the csv and update the data leaving the game ID unchanged.
-
 ==== All games on the same date
 
 * Root cause is incorrect return character.
-** If exporting from Excel, be sure to save it as _????_
+* If saving the CSV file from Excel, be sure to save it as `CSV UTF-8`
+image::import_issue_1.png[]
 
 == Fixing an Imported Schedule
 
-[IMPORTANT]
-====
-If you need to fix an imported schedule, do not delete the games and re-import.
-====
+There are 2 options when re-importing:
 
-It is easiest to export the schedule to a csv, make the changes, and re-import the schedule.  The game ID's will remain the same and the unintended data will not be removed.
+. <<overwrite, Overwrite all unplayed games you imported>>
+. <<export_import, Export and reuse existing game IDs>> to selectively overwrite specific games
+
+=== [[overwrite]]Overwrite all unplayed games
+
+image::import_issue_2.png[]
+
+If you are re-importing you can overwrite previously uploaded games but be sure to:
+
+. Select `Only replace events that I have uploaded`
++
+IMPORTANT: If you support more than one league, this will remove games from all leagues
+. Select `Ignore games prior to today's date (Recommended)`
+
+=== [[export_import]] Export and reuse existing game IDs
+
+Using this method you can export a CSV, manually modify rows of existing games and re-import it.  If you only wish to modify a handful of games, the CSV you reimport can just have the few games in it you wish to modify
+
+IMPORTANT: This will not delete any games, just alters them
+
