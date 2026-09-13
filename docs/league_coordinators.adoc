@@ -454,6 +454,8 @@ image::schedule_upload_8.png[]
 +
 image::schedule_upload_9.png[]
 . Verify the schedule looks correct on the Evergreen League Page for the season and subseason intended
+
++
 image::schedule_upload_10.png[]
 
 === Common Problems
