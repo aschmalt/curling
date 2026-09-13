@@ -338,7 +338,7 @@ image::schedule_upload_5.png[]
 
 SportsEngine uses a CSV file to upload the schedule.  The CSV file can be created in Excel or Google Sheets, but must follow the template.
 
-==== Download Schedule Template
+==== [[template]]Download Schedule Template
 
 You can download the SE Template from SportsEngine, but it has a lot of extra information that is not needed for Evergreen Curling Club leagues.  The link:schedule_template.csv[Schedule Template here] is a simplified version of the SE template and recommended for use by league coordinators.
 
@@ -475,18 +475,31 @@ There are 2 options when re-importing:
 
 === [[overwrite]]Overwrite all unplayed games
 
+IMPORTANT: If you support more than one league, this will remove games from all leagues
+
 image::import_issue_2.png[]
 
 If you are re-importing you can overwrite previously uploaded games but be sure to:
 
 . Select `Only replace events that I have uploaded`
-+
-IMPORTANT: If you support more than one league, this will remove games from all leagues
 . Select `Ignore games prior to today's date (Recommended)`
 
 === [[export_import]] Export and reuse existing game IDs
 
+IMPORTANT: This will not delete any games, this can only be used to modify existing games or add new ones
+
 Using this method you can export a CSV, manually modify rows of existing games and re-import it.  If you only wish to modify a handful of games, the CSV you reimport can just have the few games in it you wish to modify
 
-IMPORTANT: This will not delete any games, just alters them
+image::import_issue_3.png[]
 
+. Typically all games are created using Import, so `Imported Events Only` or `Imported and Manually Added Events` will result in the same data
+. Set the date range to export games for
+. Click `Export`
+. Save the file to your computer
+. Modify the file
++
+IMPORTANT: Do not alter the `Event_ID` column data as this will create a new game or accidentally modify some other game in some other league
++
+* To add new games, add new rows and leave the `Event_ID` column blank, or use the <<tempalte, Import template>> and import those separately to keep the intent of the exported CSV as modify only.
+. Use the same methods as <<import-schedule, Import Schedule>>
+* When the importer sees the same game with the matching `Event_ID`, it will overwrite it.
