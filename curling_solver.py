@@ -1,14 +1,15 @@
 from pathlib import Path
 import sys
 import math
+import itertools
 import z3
 import pickle
 import matplotlib.pyplot as plt
 import numpy as np
 from csv import DictWriter
 
-NUM_TEAMS = 13
-NUM_WEEKS = 13
+NUM_TEAMS = 8
+NUM_WEEKS = 12
 ADD_EXHIBITION_WEEK = False
 
 EVENT_IDS = []
@@ -16,20 +17,19 @@ EVENT_IDS = []
 # NUM_WEEKS = 11
 # ADD_EXHIBITION_WEEK = True
 
-SEASON_PREFIX = '26HF'
-DATES = ('09/24/2026',
-         '10/01/2026',
-         '10/08/2026',
-         '10/15/2026',
-         '10/22/2026',
-         '10/29/2026',
-         '11/05/2026',
-         '11/12/2026',
-         '11/19/2026',
-         '12/03/2026',
-         '12/10/2026',
-         '12/17/2026',
-         '09/01/2026')  # flex game
+SEASON_PREFIX = '263F'
+DATES = ('09/28/2026',
+         '10/05/2026',
+         '10/12/2026',
+         '10/19/2026',
+         '10/26/2026',
+         '11/02/2026',
+         '11/09/2026',
+         '11/16/2026',
+         '11/23/2026',
+         '11/30/2026',
+         '12/07/2026',
+         '12/14/2026',)
 
 
 TIMES = (('18:00:00', '20:00:00'), ('20:30:00', '22:30:00'))
@@ -102,9 +102,6 @@ class Schedule():
         self._max_late_games = int((self._games_per_week - num_sheets *
                                     (num_draws-1)) * num_weeks / int(num_teams/2)) + 1
 
-        Games = range(int(self._games_per_season *
-                      num_teams / self.TEAMS_PER_GAME))
-
         team_bits = int(math.ceil(math.log(num_teams, 2)))
         sheet_bits = int(math.ceil(math.log(num_sheets, 2)))
         draw_bits = int(math.ceil(math.log(num_draws, 2)))
@@ -167,9 +164,51 @@ class Schedule():
 
         return z3.And(*facts)
 
+    def set_time_sheet_usage(self) -> z3.BoolRef | z3.Probe:
+        facts = list()
+        for week in self.weeks:
+            games = self.games_in_week(week)
+
+            for sheet in self.sheets:
+                first_time = [z3.And(z3.BV2Int(game.draw) == 0,
+                                     z3.BV2Int(game.sheet) == sheet)
+                              for game in games]
+                facts.append(z3.AtLeast(*first_time, 1))
+                facts.append(z3.AtMost(*first_time, 1))
+
+            for sheet in (0, 1):
+                second_time = [z3.And(z3.BV2Int(game.draw) == 1,
+                                      z3.BV2Int(game.sheet) == sheet)
+                               for game in games]
+                facts.append(z3.AtMost(*second_time, 0))
+
+            second_time_sheet_c = [z3.And(z3.BV2Int(game.draw) == 1,
+                                          z3.BV2Int(game.sheet) == 2)
+                                  for game in games]
+            facts.append(z3.AtLeast(*second_time_sheet_c, 1))
+            facts.append(z3.AtMost(*second_time_sheet_c, 1))
+
+        return z3.And(*facts)
+
+    def set_symmetry_breaking(self) -> z3.BoolRef | z3.Probe:
+        if self.num_teams != 8 or self.num_weeks == 0:
+            return z3.BoolVal(True)
+
+        first_week = self.games_in_week(0)
+        assignments = ((0, 1, 0, 0),
+                       (2, 3, 0, 1),
+                       (4, 5, 0, 2),
+                       (6, 7, 1, 2))
+        return z3.And(*[
+            z3.And(z3.BV2Int(game.home) == home,
+                   z3.BV2Int(game.away) == away,
+                   z3.BV2Int(game.draw) == draw,
+                   z3.BV2Int(game.sheet) == sheet)
+            for game, (home, away, draw, sheet)
+            in zip(first_week, assignments)
+        ])
+
     def set_games_per_team_per_week(self) -> z3.BoolRef | z3.Probe:
-        min_games = 0 if self._byes else self._min_games_against_each_team
-        max_games = self._max_games_against_each_team
         facts = list()
         for w in self.weeks:
             for t in self.teams:
@@ -179,8 +218,8 @@ class Schedule():
                 slots = [z3.Or(*x) for x in combos]
                 facts.append(
                     z3.And(
-                        z3.AtMost(*slots, max_games),
-                        z3.AtLeast(*slots, min_games)
+                        z3.AtMost(*slots, 1),
+                        z3.AtLeast(*slots, 1)
                     )
                 )
 
@@ -194,7 +233,7 @@ class Schedule():
                     draws = [z3.BV2Int(g.draw) == d
                              for g in self.games_in_week(w)]
                     slots = [z3.And(*x) for x in zip(teams, draws)]
-                facts.append(z3.AtMost(*slots, 1))
+                    facts.append(z3.AtMost(*slots, 1))
 
         return z3.And(*facts)
 
@@ -222,25 +261,78 @@ class Schedule():
 
         return z3.And(*facts)
 
+    def no_repeat_before_all_others(self):
+        facts = list()
+        for team in self.teams:
+            opponents = [opp for opp in self.teams if opp != team]
+            for opponent in opponents:
+                for week in self.weeks:
+                    pair_this_week = [
+                        z3.And(
+                            z3.Or(z3.BV2Int(g.home) == team,
+                                  z3.BV2Int(g.away) == team),
+                            z3.Or(z3.BV2Int(g.home) == opponent,
+                                  z3.BV2Int(g.away) == opponent))
+                        for g in self.games_in_week(week)
+                    ]
+                    earlier_pair = [
+                        z3.And(
+                            z3.Or(z3.BV2Int(g.home) == team,
+                                  z3.BV2Int(g.away) == team),
+                            z3.Or(z3.BV2Int(g.home) == opponent,
+                                  z3.BV2Int(g.away) == opponent))
+                        for prev_week in self.weeks
+                        if prev_week < week
+                        for g in self.games_in_week(prev_week)
+                    ]
+                    other_seen_before = []
+                    for other in opponents:
+                        if other == opponent:
+                            continue
+                        seen_other_before = [
+                            z3.And(
+                                z3.Or(z3.BV2Int(g.home) == team,
+                                      z3.BV2Int(g.away) == team),
+                                z3.Or(z3.BV2Int(g.home) == other,
+                                      z3.BV2Int(g.away) == other))
+                            for prev_week in self.weeks
+                            if prev_week < week
+                            for g in self.games_in_week(prev_week)
+                        ]
+                        other_seen_before.append(z3.Or(*seen_other_before))
+
+                    facts.append(z3.Implies(
+                        z3.And(z3.Or(*pair_this_week), z3.Or(*earlier_pair)),
+                        z3.And(*other_seen_before)
+                    ))
+
+        return z3.And(*facts)
+
     def enforce_max_late_draws(self):
         late_draw = self.draws[-1]
+        late_games_per_week = self._games_per_week - self.num_sheets * (self.num_draws - 1)
+        late_appearances = late_games_per_week * self.num_weeks * self.TEAMS_PER_GAME
+        min_late_games = math.floor(late_appearances / self.num_teams)
+        max_late_games = math.ceil(late_appearances / self.num_teams)
         facts = list()
         for team in self.teams:
             combos = [z3.And(z3.Or(z3.BV2Int(g.home) == team,
                                    z3.BV2Int(g.away) == team,), z3.BV2Int(g.draw) == late_draw)
                       for g in self.games_in_season()]
-            facts.append(z3.AtMost(*combos, self._max_late_games))
-            facts.append(z3.AtLeast(
-                *combos, self._games_per_season - self._max_late_games))
+            facts.append(z3.AtMost(*combos, max_late_games))
+            facts.append(z3.AtLeast(*combos, min_late_games))
 
         return z3.And(*facts)
 
     def balance_sheets(self):
-        min_allowed = math.ceil(self._games_per_season / self.num_sheets) - 1
-        max_allowed = math.ceil(self._games_per_season / self.num_sheets) + 1
         facts = list()
         for team in self.teams:
             for sheet in self.sheets:
+                games_per_week = 1 + int(sheet == self.num_sheets - 1)
+                average = (games_per_week * self.num_weeks * self.TEAMS_PER_GAME
+                           / self.num_teams)
+                min_allowed = math.floor(average) - 1
+                max_allowed = math.ceil(average) + 1
                 combos = [z3.And(z3.Or(z3.BV2Int(g.home) == team,
                                        z3.BV2Int(g.away) == team,), z3.BV2Int(g.sheet) == sheet)
                           for g in self.games_in_season()]
@@ -280,44 +372,102 @@ class Schedule():
 
 
 def generate_schedule(num_weeks: int, num_teams: int, num_draws: int = 2, num_sheets: int = 3) -> list[Game]:
-    schedule = Schedule(num_weeks=num_weeks, num_teams=num_teams,
-                        num_draws=num_draws, num_sheets=num_sheets)
-    solver = z3.Solver()
-    solver.add(schedule.set_bounds())
-    solver.add(schedule.set_games_per_team_per_week())
-    solver.add(schedule.each_team_plays_each_other())
-    solver.add(schedule.balance_sheets())
-    solver.add(schedule.enforce_max_late_draws())
-    # solver.add(schedule.max_consecutive_games_on_same_sheet(2))
-    solver.add(schedule.max_consecutive_games_on_same_draw(3))
-    assert solver.check() == z3.sat
-    model = solver.model()
+    if num_teams % 2 != 0:
+        raise ValueError('num_teams must be even for a balanced round-robin schedule')
 
-    results = list()
-    for w in schedule.weeks:
-        results.append(list())
-        for d in schedule.draws:
-            results[w].append(list())
-            for s in schedule.sheets:
-                results[w][d].append('')
+    teams = list(range(num_teams))
+    rotation = teams[:]
+    rounds: list[list[tuple[int, int]]] = []
+    for _ in range(num_teams - 1):
+        pairs: list[tuple[int, int]] = []
+        for idx in range(num_teams // 2):
+            a = rotation[idx]
+            b = rotation[-1 - idx]
+            if a == b:
+                continue
+            pairs.append(tuple(sorted((a, b))))
+        rounds.append(sorted(pairs))
+        rotation = [rotation[0]] + [rotation[-1]] + rotation[1:-1]
 
-    games = list()
-    for week in schedule.weeks:
-        for gi, game in enumerate(schedule.games_in_week(week)):
-            draw = model.evaluate(game.draw).as_long()
-            sheet = model.evaluate(game.sheet).as_long()
-            home = model.evaluate(game.home).as_long()
-            away = model.evaluate(game.away).as_long()
-            if results[week][draw][sheet]:
-                print(f'conflict on week {week} draw {draw} sheet {sheet}')
-                print(results[week][draw][sheet], ' - ', f'{home} vs {away}')
-                sys.exit(1)
-            results[week][draw][sheet] = (home, away)
-            games.append(Game(home=home,
-                              away=away,
-                              draw=draw,
-                              sheet=sheet,
-                              week=week))
+    team_sheet_history: dict[int, list[int]] = {team: [] for team in teams}
+    team_late_counts: dict[int, int] = {team: 0 for team in teams}
+    team_pair_counts: dict[tuple[int, int], int] = {pair: 0 for pair in [tuple(sorted((a, b))) for a in teams for b in teams if a < b]}
+    games: list[Game] = []
+
+    def current_c_streak(team: int) -> int:
+        streak = 0
+        for sheet in reversed(team_sheet_history[team]):
+            if sheet != 2:
+                break
+            streak += 1
+        return streak
+
+    def can_assign_sheet_c(pair: tuple[int, int]) -> bool:
+        return all(current_c_streak(team) < 3 for team in pair)
+
+    def schedule_week(week_idx: int) -> bool:
+        if week_idx == num_weeks:
+            return all(count == 3 for count in team_late_counts.values())
+
+        week_pairs = rounds[week_idx % len(rounds)]
+        if week_idx >= len(rounds):
+            week_pairs = [week_pairs[(idx + week_idx) % len(week_pairs)] for idx in range(len(week_pairs))]
+
+        late_candidates = sorted(
+            [pair for pair in week_pairs
+             if team_late_counts[pair[0]] < 3
+             and team_late_counts[pair[1]] < 3
+             and can_assign_sheet_c(pair)],
+            key=lambda pair: (
+                current_c_streak(pair[0]) + current_c_streak(pair[1]),
+                team_late_counts[pair[0]] + team_late_counts[pair[1]],
+                pair[0],
+                pair[1],
+            )
+        )
+
+        for late_pair in late_candidates:
+            early_pairs = [pair for pair in week_pairs if pair != late_pair]
+            for c_pair in early_pairs:
+                if not can_assign_sheet_c(c_pair):
+                    continue
+                remaining_pairs = [pair for pair in early_pairs if pair != c_pair]
+                for sheet_a_pair, sheet_b_pair in ((remaining_pairs[0], remaining_pairs[1]),
+                                                    (remaining_pairs[1], remaining_pairs[0])):
+                    assignments = ((sheet_a_pair, 0), (sheet_b_pair, 1),
+                                   (c_pair, 2), (late_pair, 2))
+                    for pair, sheet in assignments:
+                        key = tuple(sorted(pair))
+                        team_pair_counts[key] += 1
+                        draw = 1 if pair == late_pair else 0
+                        games.append(Game(home=key[0], away=key[1], week=week_idx,
+                                          draw=draw, sheet=sheet))
+                        for team in key:
+                            team_sheet_history[team].append(sheet)
+                            if draw == 1:
+                                team_late_counts[team] += 1
+
+                    if schedule_week(week_idx + 1):
+                        return True
+
+                    for pair, _ in reversed(assignments):
+                        key = tuple(sorted(pair))
+                        team_pair_counts[key] -= 1
+                        games.pop()
+                        for team in key:
+                            team_sheet_history[team].pop()
+                            if pair == late_pair:
+                                team_late_counts[team] -= 1
+
+        return False
+
+    if not schedule_week(0):
+        raise RuntimeError('Unable to generate a schedule with a maximum three-game Sheet C streak')
+
+    # exact even late-game target: 3 per team
+    if any(v != 3 for v in team_late_counts.values()):
+        raise RuntimeError(f'Late draw distribution not even: {team_late_counts}')
+
     return games
 
 
@@ -498,15 +648,16 @@ def print_bye_weeks(games: list[Game]) -> None:
             teams_playing.add(game.home)
             teams_playing.add(game.away)
         not_playing = set(teams) - teams_playing
-        assert len(not_playing) == 1
-        date = DATES[week]
-        print(f'{date} - {SEASON_PREFIX}{list(not_playing)[0]}')
+        if len(not_playing) == 0:
+            print(f'{DATES[week]} - No bye week')
+        else:
+            print(f'{DATES[week]} - Bye teams: {sorted(not_playing)}')
 
 
 if __name__ == '__main__':
     saved_file = Path(__file__).parent / \
         f'schedule_{NUM_TEAMS}teams_{NUM_WEEKS}weeks.pckl'
-
+    saved_file.unlink(missing_ok=True)
     if saved_file.exists():
         with open(saved_file, 'rb') as fp:
             games: list[Game] = pickle.load(fp)
