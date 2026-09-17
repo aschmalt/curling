@@ -213,6 +213,7 @@ For each team:
 . Name: Enter Team Name.
 . Short Name: Enter Short Name.
 * This is what will be shown on the banner in the Evergreen League Page
++
 image::team_banner.png[Team Banner]
 . [[team_abbreviation]]Abbreviation: Enter Abbreviation.
 * This is useful for game scheduling.  Recommendation is to keep it 6 characters:
@@ -317,6 +318,7 @@ image::schedule_upload_1.png[Schedule Upload]
 === [[assign_teamids]]Assign Team/Division IDs
 
 . Navigate to the `Assign Team/Division IDs` tab.
++
 image::schedule_upload_2.png[]
 . Select the League, Season, and Subseason for which you are assigning Team IDs.
 * Recommend using the same team ID style as the <<team_abbreviation, team abbreviation>>, e.g. `26HF01` for 2026 Thursday Fall Team 1.
@@ -330,8 +332,10 @@ Remember these are the IDs that will be used in the schedule upload file and mus
 ====
 image::schedule_upload_3.png[]
 . Click `SAVE TEAM/DIVISION IDS` to save the Team IDs.
++
 image::schedule_upload_4.png[]
 . The screen won't really change, but there is a message at the top of the screen indicating the Team IDs were saved.
++
 image::schedule_upload_5.png[]
 
 === [[create-schedule]]Build Schedule File
@@ -434,6 +438,7 @@ Populate the template with:
 === [[import-schedule]]Import Schedule
 
 . Navigate to the `Import Schedule` tab.
++
 image::schedule_upload_6.png[]
 . Click `Choose File` to select the schedule csv file you created.
 * Make sure the `Schedule Format` is set to `SportsEngine File Format`.
@@ -445,6 +450,7 @@ image::schedule_upload_6.png[]
 image::schedule_upload_7.png[]
 . Click `IMPORT SCHEDULE` to import the schedule.
 . A progress bar will appear
++
 image::schedule_upload_8.png[]
 . Upon completion, a summary of the import will be displayed.
 * This should show that all games were imported successfully.
@@ -464,6 +470,7 @@ image::schedule_upload_10.png[]
 
 * Root cause is incorrect return character.
 * If saving the CSV file from Excel, be sure to save it as `CSV UTF-8`
++
 image::import_issue_1.png[]
 
 == Fixing an Imported Schedule
