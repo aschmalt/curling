@@ -231,8 +231,10 @@ Example: `26HF01` for 2026 Thursday Fall Team 1.
 . Primary Color: Leave defaulted.
 . Logo to Upload: Leave unmodified.
 . Include Team in Standings: Leave as `Yes`.
-. Page Display Status: Select `Public` if available.
-* Public will allow hte members rostered to see the team page and the team in SportsEngine app.
+. Page Display Status: Select `Public` if available, else select `Private`
+* `Private` or `Public` will allow the members rostered to see the team page and the team in SportsEngine app, while `Disabled` will not.
+* `Public` will only be available if the League is set to `Public` by the club.
+* `Public` will make the League and team rosters available to the general public, not just ECC memberships.
 . Click Create team Page button
 
 Repeat for all teams.
