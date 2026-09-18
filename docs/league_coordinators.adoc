@@ -201,7 +201,7 @@ Subseason: Fall
 image::new_team_1.png[Teams Tab]
 
 
-=== Create Team Steps
+=== [[create-team]]Create Team Steps
 
 For each team:
 
@@ -468,6 +468,20 @@ image::schedule_upload_10.png[]
 
 === Common Problems
 
+If when <<import-schedule importing a schedule>> the system states there are errors, the `Click Here` may not work.  To see the issues, you can:
+
+. Click `Back to Schedule Upload`
++
+image::import_issue_4.png[]
+. Scroll down to the bottom of the `Schedule Upload` where there is a table showing history of uploads.
+. Find the one that you did. Typically the most recent.
++
+image::import_issue_5.png[]
+. Click `Results`
+. This will show you a page of the issues encountered and on which rows.
++
+image::import_issue_6.png[]
+
 ==== All games on the same date
 
 * Root cause is incorrect return character.
@@ -475,14 +489,25 @@ image::schedule_upload_10.png[]
 +
 image::import_issue_1.png[]
 
-== Fixing an Imported Schedule
+==== Date Are Not Valid
+
+<<import-schedule,Import Schedule>> requires date format to be in `MM/DD/YYYY` format.
+
+Common reasons for the format to be incorrect:
+
+* CSV editor (Excel, Sheets, etc) may be saving in a different format.
+** Open the file in a text editor to verify (ie. Notepad)
+* `Export` from the `Schedule Upload` page exports the dates in `YYYY-MM-DD` format.
+** This has been raised to SportsEngine as a bug.
+
+=== Fixing an Already Imported Schedule
 
 There are 2 options when re-importing:
 
 . <<overwrite, Overwrite all unplayed games you imported>>
 . <<export_import, Export and reuse existing game IDs>> to selectively overwrite specific games
 
-=== [[overwrite]]Overwrite all unplayed games
+==== [[overwrite]]Overwrite all unplayed games
 
 IMPORTANT: If you support more than one league, this will remove games from all leagues
 
@@ -493,7 +518,7 @@ If you are re-importing you can overwrite previously uploaded games but be sure 
 . Select `Only replace events that I have uploaded`
 . Select `Ignore games prior to today's date (Recommended)`
 
-=== [[export_import]] Export and reuse existing game IDs
+==== [[export_import]] Export and reuse existing game IDs
 
 IMPORTANT: This will not delete any games, this can only be used to modify existing games or add new ones
 
@@ -512,3 +537,113 @@ IMPORTANT: Do not alter the `Event_ID` column data as this will create a new gam
 * To add new games, add new rows and leave the `Event_ID` column blank, or use the <<tempalte, Import template>> and import those separately to keep the intent of the exported CSV as modify only.
 . Use the same methods as <<import-schedule, Import Schedule>>
 * When the importer sees the same game with the matching `Event_ID`, it will overwrite it.
+
+== Default Season Selection
+
+Once a Season and Sub-Season have been created using the above methods, it still needs to eventually become the `Current Season` on the League Page.
+
+This is done on the main Evergreen League Page in `Edit Mode`.
+
+[NOTE]
+====
+You may need to be in `Edit Mode` before the page will be <<visibility,visible>>.
+====
+
+image::edit_mode.png[]
+
+From the League Page:
+
+. Click `Admin`
+. Click `Permissions`
+. Select the Season and Sub-Season to mark as current season
+* This will be the season folks will automatically be directed to when they log into the website.
+* Members will be able to go to future/previous seasons
+
+image::current_season.png[]
+
+== [[visibility]]Visibility Permissions
+
+This is done on the main Evergreen League Page in `Edit Mode`.
+
+[NOTE]
+====
+You may need to be in `Edit Mode` before the page will be visible.
+====
+
+image::edit_mode.png[]
+
+=== Permissions Levels Explained
+
+Each page on the website has 3 levels available on who can view/see/visit the page.
+
+Disabled::
+
+* This is only visible to admins, such as `Draw Coordinators` when in `Edit Mode`.
+* General members cannot see the page.
+* General public cannot see the page.
+
+Private::
+
+* This is only visible to admins, such as `Draw Coordinators` when in `Edit Mode`.
+* General member *may* see the page
+** This will depend on the `Groups` that are assigned to the page.
+** Evergreen does not maintain a current members group, so this can be hit and miss with members
+* General public cannot see the page.
+
+Public::
+
+* Visible to everyone, including the general public
+
+
+=== League Level
+
+Recommendation is to ensure the League is `Public` visibility for a few reasons:
+
+. `Private` can be challenging to ensure the league members and subs are in the group list that has visibility.
+. There **must not** be any confidential information on these league pages such as member contact information.
+* This is true regardless of visibility level
+* Contact information is not to be shared for our members, except via:
+** Slack (member invite only)
+** Sub-List (member's decide what they share)
+. Allows friends, family, and fans that are not members are able to see the schedules and standings for their favorite curlers.
+
+image::league_permissions_1.png[]
+image::league_permissions_2.png[]
+
+=== Team Level
+
+This may need to be done for each team one at time if correct setting was not chosen during <<create-team,team creation>>
+
+Recommendation is to ensure the Team pages have the same visibility as the <<_league_level>>
+
+From the League `Home` Page you can click on `Pages` and get a view of what permissions each Team page is set to.
+
+image::team_visibility_4.png[]
+
+Beside each team, there are 3 options:
+
+. No symbol (`Public`): as seen in image below for `Our House`
+. `Prviate` symbol: as seen in image below for `Rutherford`
+. `Disabled` symbol: as seen in image below for `Schmaltz`
+
+image::team_visibility_symbols.png[]
+
+==== Change Team Permissions
+
+To change the visibility permissions:
+
+. Go to the Team page to be edited
+. Click `Admin`
+. Click `Permissions`
++
+image::team_visibility.png[]
+. Click the permission level that matches the <<_league_level,League Level>>
++
+image::team_visibility_2.png[]
+. Click `Change Page Status to \\______`
+* `\\______` will be `Disabled`, `Private` or `Public` depending on the choice made.
+
++
+image::team_visibility_3.png[]
+
+// == Divisions (Tuesday League)
