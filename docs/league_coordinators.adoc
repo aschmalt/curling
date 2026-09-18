@@ -607,8 +607,25 @@ Recommendation is to ensure the League is `Public` visibility for a few reasons:
 ** Sub-List (member's decide what they share)
 . Allows friends, family, and fans that are not members are able to see the schedules and standings for their favorite curlers.
 
+. Go to the Team page to be edited
+. Click `Admin`
+. Click `Permissions`
++
 image::league_permissions_1.png[]
+. Click the permission level desired
++
 image::league_permissions_2.png[]
+. In the popup, selecting the pages to edit
+* `This Page & All Pages Above.` will only affect this page
+* `This Page, All Pages Above, & All Pages Below.` will change the Team Pages also
+* If this selection is not found, it may be due to the permission change not affecting any other pages; as they are of equal or higher permissions access.
++
+
+. Click `Change Page Status to \\______`
+* `\\______` will be `Disabled`, `Private` or `Public` depending on the choice made.
+
++
+image::league_permissions_3.png[]
 
 === Team Level
 
