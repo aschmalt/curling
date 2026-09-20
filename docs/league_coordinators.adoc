@@ -587,25 +587,15 @@ Private::
 * This is only visible to admins, such as `Draw Coordinators` when in `Edit Mode`.
 * General member *may* see the page
 ** This will depend on the `Groups` that are assigned to the page.
-** Evergreen does not maintain a current members group, so this can be hit and miss with members
+** Use the `Members Master Group (Member Questions)` group to provide members access to the page
 * General public cannot see the page.
 
 Public::
 
 * Visible to everyone, including the general public
-
+* **MUST NOT** contain any senstitive member information such as contact information
 
 === League Level
-
-Recommendation is to ensure the League is `Public` visibility for a few reasons:
-
-. `Private` can be challenging to ensure the league members and subs are in the group list that has visibility.
-. There **must not** be any confidential information on these league pages such as member contact information.
-* This is true regardless of visibility level
-* Contact information is not to be shared for our members, except via:
-** Slack (member invite only)
-** Sub-List (member's decide what they share)
-. Allows friends, family, and fans that are not members are able to see the schedules and standings for their favorite curlers.
 
 . Go to the Team page to be edited
 . Click `Admin`
@@ -626,6 +616,38 @@ image::league_permissions_2.png[]
 
 +
 image::league_permissions_3.png[]
+
+==== [[league-group-permissions]]Member Group Access
+
+If using `Private` permissions, ensure the members have read access from the `Group Permissions` setting.
+
+[IMPORTANT]
+====
+If using `Private` with `Members Master Group (Member Questions)`, the group will may to be manually added to each <<_team_level,Team Level>> page as well.
+====
+
+Under the Group Permissions, if the `Members Master Group (Member Questions)` is not listed, members **will not** have access to see the page and they will need to be added.
+
+image::group_permissions_no_members.png[]
+
+To add the `Members Master Group (Member Questions)`:
+
+. Click the `Add Group`
++
+image::team_group_permissions_1.png[]
+. In the Search Window, type `members master` to find the right group name
++
+image::team_group_permissions_2.png[]
+. Select `Members Master Group (Member Questions)`
++
+image::team_group_permissions_3.png[]
+. This will add it to the `GROUP` section
+. Click `Add Groups`
++
+image::team_group_permissions_4.png[]
+. This will be shown in the `GROUP PERMISSIONS` table with `View` access selected
++
+image::team_group_permissions_5.png[]
 
 === Team Level
 
@@ -662,5 +684,26 @@ image::team_visibility_2.png[]
 
 +
 image::team_visibility_3.png[]
+. Check for the `Members Master Group (Member Questions)` is listed in the `GROUP PERMISSIONS` table.
+* If not, continue to add it.
+
++
+image::group_permissions_no_members.png[]
+.. Click the `Add Group`
++
+image::team_group_permissions_1.png[]
+.. In the Search Window, type `members master` to find the right group name
++
+image::team_group_permissions_2.png[]
+.. Select `Members Master Group (Member Questions)`
++
+image::team_group_permissions_3.png[]
+.. This will add it to the `GROUP` section
+.. Click `Add Groups`
++
+image::team_group_permissions_4.png[]
+.. This will be shown in the `GROUP PERMISSIONS` table with `View` access selected
++
+image::team_group_permissions_5.png[]
 
 // == Divisions (Tuesday League)
